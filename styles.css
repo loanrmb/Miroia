@@ -1975,3 +1975,252 @@ html {
   .compare-table td { padding: 4px 12px; text-align: left; }
   .compare-table td::before { content: attr(data-label) ' : '; color: var(--color-text-subtle); font-size: 12px; }
 }
+
+
+/* ============================================
+   21. SCROLL REVEAL — base classes
+   ============================================ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-glide), transform 0.9s var(--ease-glide);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal="fade"] { transform: none; }
+[data-reveal="up-strong"] { transform: translateY(56px); }
+[data-reveal="scale"] { transform: scale(0.94); transform-origin: center; }
+[data-reveal="scale"].is-visible { transform: scale(1); }
+[data-reveal="left"] { transform: translateX(-32px); }
+[data-reveal="left"].is-visible { transform: translateX(0); }
+[data-reveal="right"] { transform: translateX(32px); }
+[data-reveal="right"].is-visible { transform: translateX(0); }
+
+/* Stagger children */
+[data-reveal-children] > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease-glide), transform 0.8s var(--ease-glide);
+}
+[data-reveal-children].is-visible > * { opacity: 1; transform: translateY(0); }
+[data-reveal-children].is-visible > *:nth-child(1) { transition-delay: 0.05s; }
+[data-reveal-children].is-visible > *:nth-child(2) { transition-delay: 0.13s; }
+[data-reveal-children].is-visible > *:nth-child(3) { transition-delay: 0.21s; }
+[data-reveal-children].is-visible > *:nth-child(4) { transition-delay: 0.29s; }
+[data-reveal-children].is-visible > *:nth-child(5) { transition-delay: 0.37s; }
+[data-reveal-children].is-visible > *:nth-child(6) { transition-delay: 0.45s; }
+[data-reveal-children].is-visible > *:nth-child(7) { transition-delay: 0.53s; }
+[data-reveal-children].is-visible > *:nth-child(8) { transition-delay: 0.61s; }
+
+/* Word-by-word reveal on titles */
+.reveal-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em);
+  filter: blur(8px);
+  transition:
+    opacity 0.7s var(--ease-glide),
+    transform 0.7s var(--ease-glide),
+    filter 0.7s var(--ease-glide);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+[data-reveal-words].is-visible .reveal-word {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Char-by-char reveal for small eyebrow labels */
+.reveal-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s var(--ease-glide), transform 0.5s var(--ease-glide);
+  transition-delay: calc(var(--i, 0) * 25ms);
+}
+[data-reveal-chars].is-visible .reveal-char {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   22. CARD TILT (3D mouse-tracking)
+   ============================================ */
+[data-tilt] {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --tilt-lift: 0px;
+  transform: perspective(1200px) rotateY(var(--tilt-x)) rotateX(var(--tilt-y)) translateY(var(--tilt-lift));
+  transform-style: preserve-3d;
+  transition: transform 0.5s var(--ease-glide), border-color 0.3s ease;
+  will-change: transform;
+}
+[data-tilt]:hover {
+  --tilt-lift: -3px;
+  transition-duration: 0.15s;
+}
+[data-tilt]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255,255,255,0.10),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 2;
+}
+[data-tilt]:hover::after { opacity: 1; }
+
+/* Override existing card hover transforms when tilt is active */
+.beauty__card[data-tilt]:hover,
+.pricing-card[data-tilt]:hover {
+  transform: perspective(1200px) rotateY(var(--tilt-x)) rotateX(var(--tilt-y)) translateY(var(--tilt-lift));
+}
+
+/* ============================================
+   23. MAGNETIC BUTTONS
+   ============================================ */
+[data-magnetic] {
+  --mag-x: 0px;
+  --mag-y: 0px;
+  transition: transform 0.3s var(--ease-glide), filter 0.25s ease;
+}
+.btn[data-magnetic] {
+  transform: translate(var(--mag-x), var(--mag-y));
+}
+.btn[data-magnetic]:hover { transform: translate(var(--mag-x), calc(var(--mag-y) - 1px)); }
+
+/* ============================================
+   24. SHIMMER & PULSE
+   ============================================ */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.btn--prism {
+  background: linear-gradient(135deg, #b266ff 0%, #ff6699 25%, #ff9966 50%, #66ccff 75%, #b266ff 100%);
+  background-size: 200% 200%;
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.25); }
+}
+.hero__pill-dot,
+.manifest__eyebrow::before,
+.page-hero__eyebrow::before,
+.pricing-trial::before {
+  animation: pulse-soft 2.6s var(--ease-glide) infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(102,204,255,0.6); }
+  50% { box-shadow: 0 0 16px rgba(102,204,255,0.9); }
+}
+.footer__status-dot {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Animated gradient sweep on .gradient-text */
+.gradient-text-anim {
+  background: linear-gradient(90deg, #b266ff, #ff6699, #ff9966, #66ccff, #b266ff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 8s linear infinite;
+}
+
+/* Active tab gradient sweep */
+.fc-tab.active::after {
+  background: linear-gradient(90deg, #b266ff, #ff6699, #ff9966, #66ccff, #b266ff);
+  background-size: 200% 100%;
+  animation: shimmer 5s linear infinite;
+}
+
+/* Mockup live: subtle breathing on stat cards */
+@keyframes breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+.crm-stat::before { animation: breathe 5s ease-in-out infinite; }
+.crm-stat:nth-child(2)::before { animation-delay: 0.7s; }
+.crm-stat:nth-child(3)::before { animation-delay: 1.4s; }
+
+/* Float animation for CRM avatars */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+.crm-client-row:nth-child(1) .crm-avatar { animation: float 4s ease-in-out infinite; }
+.crm-client-row:nth-child(2) .crm-avatar { animation: float 4s ease-in-out 0.6s infinite; }
+.crm-client-row:nth-child(3) .crm-avatar { animation: float 4s ease-in-out 1.2s infinite; }
+.crm-client-row:nth-child(4) .crm-avatar { animation: float 4s ease-in-out 1.8s infinite; }
+
+/* Backlight drift */
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-3%, 2%) scale(1.05); }
+  66% { transform: translate(2%, -2%) scale(0.97); }
+}
+body::before { animation: drift 22s ease-in-out infinite; }
+
+/* Manifest line — gradient sweep when lit */
+.manifest__line.is-lit em {
+  background: linear-gradient(90deg, #b266ff, #ff6699, #ff9966, #66ccff, #b266ff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+/* CTA glow — subtle pulsing aura */
+@keyframes cta-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.cta::before { animation: cta-glow 8s ease-in-out infinite; }
+
+/* Pricing card featured — animated border */
+.pricing-card--featured::after {
+  background: linear-gradient(135deg, #b266ff, #ff6699, #ff9966, #66ccff, #b266ff);
+  background-size: 300% 300%;
+  animation: shimmer 8s linear infinite;
+}
+
+/* Subtle hover lift on feat6 icons */
+.feat6__icon, .product-section__feature-icon {
+  transition: transform 0.3s var(--ease-spring), border-color 0.3s ease, background 0.3s ease;
+}
+.feat6:hover .feat6__icon,
+.product-section__feature:hover .product-section__feature-icon {
+  transform: translateY(-2px) scale(1.05);
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-raised);
+}
+
+/* ============================================
+   25. REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal], [data-reveal-children] > *,
+  .reveal-word, .reveal-char {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

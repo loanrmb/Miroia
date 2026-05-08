@@ -37,13 +37,13 @@
          ============================================ -->
     <section class="hero">
       <div class="hero__top">
-        <h1 class="hero__title" id="heroTitle">Le système pensé pour les coachs en image</h1>
+        <h1 class="hero__title" data-reveal-words>Le système pensé pour les coachs en image</h1>
         <a class="hero__pill" href="#manifest">
           <span class="hero__pill-dot"></span>
           Pourquoi un outil dédié <span class="hero__pill-arrow">→</span>
         </a>
       </div>
-      <p class="hero__sub">
+      <p class="hero__sub" data-reveal>
         Centralisez vos clientes, séances, analyses colorimétriques et facturation. Conçu pour celles qui transforment leur passion en activité durable.
       </p>
 
@@ -87,17 +87,17 @@
             <div class="crm-cards">
               <div class="crm-stat">
                 <div class="crm-stat__label">Clientes actives</div>
-                <div class="crm-stat__value">24</div>
+                <div class="crm-stat__value" data-counter="24">24</div>
                 <div class="crm-stat__sub">+3 ce mois</div>
               </div>
               <div class="crm-stat">
                 <div class="crm-stat__label">Séances ce mois</div>
-                <div class="crm-stat__value">18</div>
+                <div class="crm-stat__value" data-counter="18">18</div>
                 <div class="crm-stat__sub">4 à venir</div>
               </div>
               <div class="crm-stat">
                 <div class="crm-stat__label">Chiffre d'affaires</div>
-                <div class="crm-stat__value">3 840€</div>
+                <div class="crm-stat__value" data-counter="3840" data-suffix=" €">3 840€</div>
                 <div class="crm-stat__sub">↑ 12% vs avril</div>
               </div>
             </div>
@@ -173,16 +173,16 @@
          ============================================ -->
     <section class="beauty" id="produit">
       <header class="section-head">
-        <h2 class="section-head__title">Tout est dans<br/>le détail</h2>
-        <p class="section-head__sub">
+        <h2 class="section-head__title" data-reveal-words>Tout est dans<br/>le détail</h2>
+        <p class="section-head__sub" data-reveal>
           Des outils précis pour les gestes quotidiens du coaching d'image. Pensés avec des coachs, testés sur le terrain.
         </p>
       </header>
 
       <div class="beauty__viewport">
-        <ul class="beauty__track" id="beautyTrack">
+        <ul class="beauty__track" id="beautyTrack" data-reveal-children>
 
-          <li class="beauty__card">
+          <li class="beauty__card" data-tilt="4">
             <div class="beauty__visual">
               <div class="bv bv-palette">
                 <span style="background:#b266ff;"></span>
@@ -197,7 +197,7 @@
             </p>
           </li>
 
-          <li class="beauty__card">
+          <li class="beauty__card" data-tilt="4">
             <div class="beauty__visual">
               <div class="bv bv-shapes">
                 <span></span><span></span><span></span>
@@ -208,7 +208,7 @@
             </p>
           </li>
 
-          <li class="beauty__card">
+          <li class="beauty__card" data-tilt="4">
             <div class="beauty__visual">
               <div class="bv">
                 <div class="bv-doc">
@@ -224,7 +224,7 @@
             </p>
           </li>
 
-          <li class="beauty__card">
+          <li class="beauty__card" data-tilt="4">
             <div class="beauty__visual">
               <div class="bv bv-objectives">
                 <div class="bv-bar-wrap">
@@ -246,7 +246,7 @@
             </p>
           </li>
 
-          <li class="beauty__card">
+          <li class="beauty__card" data-tilt="4">
             <div class="beauty__visual">
               <div class="bv">
                 <div class="bv-invoice">
@@ -262,7 +262,7 @@
             </p>
           </li>
 
-          <li class="beauty__card">
+          <li class="beauty__card" data-tilt="4">
             <div class="beauty__visual">
               <div class="bv">
                 <div class="bv-dashboard">
@@ -293,13 +293,13 @@
          ============================================ -->
     <section class="spotlight">
       <div class="spotlight__head">
-        <h2 class="spotlight__title">Une fiche cliente,<br/>tout votre coaching</h2>
-        <p class="spotlight__sub">
+        <h2 class="spotlight__title" data-reveal-words>Une fiche cliente,<br/>tout votre coaching</h2>
+        <p class="spotlight__sub" data-reveal>
           Centralisez colorimétrie, morphologie, photos avant/après, notes de séance et facturation dans un espace unique. Plus de fichiers éparpillés. Plus de copier-coller.
         </p>
       </div>
 
-      <div class="spotlight__visual">
+      <div class="spotlight__visual" data-reveal="scale">
         <div class="spotlight__panel">
           <!-- Replace with real fiche cliente screenshot -->
           <div class="fc-aside">
@@ -366,7 +366,7 @@
       </div>
 
       <!-- 6-feature grid -->
-      <div class="spotlight__grid">
+      <div class="spotlight__grid" data-reveal-children>
         <div class="feat6">
           <div class="feat6__icon violet">◐</div>
           <h6>Colorimétrie</h6>
@@ -406,10 +406,10 @@
          ============================================ -->
     <section class="cta" id="cta">
       <div class="cta__inner">
-        <h2 class="cta__title">Prête à exercer<br/>autrement ?</h2>
-        <p class="cta__sub">14 jours d'essai gratuit. Sans carte bancaire. Sans engagement.</p>
-        <div class="cta__buttons">
-          <a class="btn btn--prism" href="#">Essayer gratuitement</a>
+        <h2 class="cta__title" data-reveal-words>Prête à exercer<br/>autrement ?</h2>
+        <p class="cta__sub" data-reveal>14 jours d'essai gratuit. Sans carte bancaire. Sans engagement.</p>
+        <div class="cta__buttons" data-reveal>
+          <a class="btn btn--prism" data-magnetic="0.3" href="#">Essayer gratuitement</a>
           <a class="btn btn--ghost" href="#">Demander une démo</a>
         </div>
       </div>
@@ -493,16 +493,9 @@
   </div><!-- .page -->
 
 
+  <script src="animations.js"></script>
+
   <script>
-    // ============ HERO TITLE — WORD-BY-WORD REVEAL ============
-    (() => {
-      const title = document.getElementById('heroTitle');
-      if (!title) return;
-      const words = title.textContent.trim().split(/\s+/);
-      title.innerHTML = words
-        .map((w, i) => `<span class="word" style="animation-delay:${0.05 + i * 0.06}s">${w}</span>`)
-        .join(' ');
-    })();
 
     // ============ BEAUTY CAROUSEL ============
     (() => {

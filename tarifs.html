@@ -35,8 +35,8 @@
     <!-- ============ PAGE HERO ============ -->
     <header class="page-hero">
       <div class="page-hero__eyebrow">Tarifs</div>
-      <h1 class="page-hero__title">Simple. Transparent. <em>Sans engagement.</em></h1>
-      <p class="page-hero__sub">
+      <h1 class="page-hero__title" data-reveal-words>Simple. Transparent. <em>Sans engagement.</em></h1>
+      <p class="page-hero__sub" data-reveal>
         Trois offres pour grandir à votre rythme. 14 jours d'essai gratuit, sans carte bancaire. Annulation à tout moment.
       </p>
     </header>
@@ -48,15 +48,15 @@
           <span><strong>14 jours gratuits</strong> · sans carte bancaire · accès complet</span>
         </div>
 
-        <div class="pricing-toggle" id="pricingToggle" role="tablist" aria-label="Période de facturation">
+        <div class="pricing-toggle" data-reveal id="pricingToggle" role="tablist" aria-label="Période de facturation">
           <button class="active" data-period="monthly">Mensuel</button>
           <button data-period="yearly">Annuel <span class="badge">−20%</span></button>
         </div>
 
-        <div class="pricing-grid">
+        <div class="pricing-grid" data-reveal-children>
 
           <!-- Essentiel -->
-          <article class="pricing-card">
+          <article class="pricing-card" data-tilt="3">
             <div class="pricing-card__head">
               <h3>Essentiel</h3>
               <p>Pour les coachs solo qui démarrent.</p>
@@ -79,7 +79,7 @@
           </article>
 
           <!-- Pro (featured) -->
-          <article class="pricing-card pricing-card--featured">
+          <article class="pricing-card pricing-card--featured" data-tilt="3">
             <span class="pricing-card__badge">Recommandé</span>
             <div class="pricing-card__head">
               <h3>Pro</h3>
@@ -101,11 +101,11 @@
               <li>Application mobile</li>
               <li>Support prioritaire</li>
             </ul>
-            <a class="btn btn--prism" href="#">Commencer l'essai</a>
+            <a class="btn btn--prism" data-magnetic="0.3" href="#">Commencer l'essai</a>
           </article>
 
           <!-- Studio -->
-          <article class="pricing-card">
+          <article class="pricing-card" data-tilt="3">
             <div class="pricing-card__head">
               <h3>Studio</h3>
               <p>Pour les écoles et studios multi-coachs.</p>
@@ -134,9 +134,9 @@
 
     <!-- ============ COMPARISON TABLE ============ -->
     <section class="compare">
-      <h2 class="compare__title">Comparer les <em style="font-style:italic;background:var(--gradient-prism);-webkit-background-clip:text;background-clip:text;color:transparent;">offres</em></h2>
+      <h2 class="compare__title" data-reveal-words>Comparer les <em style="font-style:italic;background:var(--gradient-prism);-webkit-background-clip:text;background-clip:text;color:transparent;">offres</em></h2>
 
-      <table class="compare-table">
+      <table class="compare-table" data-reveal>
         <thead>
           <tr>
             <th>Fonctionnalités</th>
@@ -268,8 +268,8 @@
     </section>
 
     <!-- ============ FAQ ============ -->
-    <section class="faq">
-      <h2 class="faq__title">Questions fréquentes</h2>
+    <section class="faq" data-reveal-children>
+      <h2 class="faq__title" data-reveal-words>Questions fréquentes</h2>
 
       <details class="faq-item">
         <summary>L'essai gratuit nécessite-t-il une carte bancaire ?</summary>
@@ -331,10 +331,10 @@
     <!-- ============ CTA ============ -->
     <section class="cta" id="cta" style="margin-top:120px;">
       <div class="cta__inner">
-        <h2 class="cta__title">Prête à essayer ?</h2>
-        <p class="cta__sub">14 jours d'essai gratuit. Sans carte bancaire. Sans engagement.</p>
-        <div class="cta__buttons">
-          <a class="btn btn--prism" href="#">Essayer gratuitement</a>
+        <h2 class="cta__title" data-reveal-words>Prête à essayer ?</h2>
+        <p class="cta__sub" data-reveal>14 jours d'essai gratuit. Sans carte bancaire. Sans engagement.</p>
+        <div class="cta__buttons" data-reveal>
+          <a class="btn btn--prism" data-magnetic="0.3" href="#">Essayer gratuitement</a>
           <a class="btn btn--ghost" href="#">Demander une démo</a>
         </div>
       </div>
@@ -400,6 +400,8 @@
 
   </div><!-- .page -->
 
+
+  <script src="animations.js"></script>
 
   <script>
     // ============ PRICING TOGGLE ============
