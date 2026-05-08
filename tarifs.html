@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifs — Miroia</title>
+  <meta name="description" content="Tarifs simples, sans engagement. 14 jours d'essai gratuit pour découvrir Miroia. Trois offres pour grandir à votre rythme." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav">
+    <div class="nav__wrapper">
+      <a class="nav__logo" href="index.html" aria-label="Miroia">
+        <span class="nav__logo-mark"></span>
+        Miroia
+      </a>
+      <div class="nav__links">
+        <a href="produit.html">Produit</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="index.html#manifest">Notre vision</a>
+      </div>
+      <a class="nav__cta" href="#cta">Essayer gratuitement</a>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- ============ PAGE HERO ============ -->
+    <header class="page-hero">
+      <div class="page-hero__eyebrow">Tarifs</div>
+      <h1 class="page-hero__title">Simple. Transparent. <em>Sans engagement.</em></h1>
+      <p class="page-hero__sub">
+        Trois offres pour grandir à votre rythme. 14 jours d'essai gratuit, sans carte bancaire. Annulation à tout moment.
+      </p>
+    </header>
+
+    <!-- ============ PRICING ============ -->
+    <section class="pricing">
+      <div class="pricing-wrap">
+        <div class="pricing-trial">
+          <span><strong>14 jours gratuits</strong> · sans carte bancaire · accès complet</span>
+        </div>
+
+        <div class="pricing-toggle" id="pricingToggle" role="tablist" aria-label="Période de facturation">
+          <button class="active" data-period="monthly">Mensuel</button>
+          <button data-period="yearly">Annuel <span class="badge">−20%</span></button>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Essentiel -->
+          <article class="pricing-card">
+            <div class="pricing-card__head">
+              <h3>Essentiel</h3>
+              <p>Pour les coachs solo qui démarrent.</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="amount" data-monthly="29" data-yearly="23">29</span>
+              <span class="currency">€</span>
+              <span class="period">/mois</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li>Jusqu'à 30 clientes actives</li>
+              <li>Agenda et séances illimitées</li>
+              <li>Fiches clientes complètes</li>
+              <li>Colorimétrie + morphologie</li>
+              <li>Photos illimitées</li>
+              <li>Devis et factures</li>
+              <li>Support par email</li>
+            </ul>
+            <a class="btn btn--glass" href="#">Commencer l'essai</a>
+          </article>
+
+          <!-- Pro (featured) -->
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">Recommandé</span>
+            <div class="pricing-card__head">
+              <h3>Pro</h3>
+              <p>Pour les coachs établies qui veulent gagner du temps.</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="amount" data-monthly="59" data-yearly="47">59</span>
+              <span class="currency">€</span>
+              <span class="period">/mois</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li><strong>Clientes illimitées</strong></li>
+              <li>Tout Essentiel inclus</li>
+              <li>Garde-robe virtuelle</li>
+              <li>Suivi d'objectifs</li>
+              <li>Templates de séance personnalisés</li>
+              <li>Analyses et rapports avancés</li>
+              <li>Branding personnalisé (factures)</li>
+              <li>Application mobile</li>
+              <li>Support prioritaire</li>
+            </ul>
+            <a class="btn btn--prism" href="#">Commencer l'essai</a>
+          </article>
+
+          <!-- Studio -->
+          <article class="pricing-card">
+            <div class="pricing-card__head">
+              <h3>Studio</h3>
+              <p>Pour les écoles et studios multi-coachs.</p>
+            </div>
+            <div class="pricing-card__price">
+              <span class="amount" data-monthly="149" data-yearly="119">149</span>
+              <span class="currency">€</span>
+              <span class="period">/mois</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li><strong>Jusqu'à 5 coachs inclus</strong></li>
+              <li>Tout Pro inclus</li>
+              <li>Espace équipe partagé</li>
+              <li>Rôles et permissions</li>
+              <li>Reporting consolidé</li>
+              <li>Account manager dédié</li>
+              <li>Onboarding personnalisé</li>
+              <li>Accès API</li>
+            </ul>
+            <a class="btn btn--glass" href="#">Nous contacter</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPARISON TABLE ============ -->
+    <section class="compare">
+      <h2 class="compare__title">Comparer les <em style="font-style:italic;background:var(--gradient-prism);-webkit-background-clip:text;background-clip:text;color:transparent;">offres</em></h2>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Fonctionnalités</th>
+            <th>Essentiel</th>
+            <th>Pro</th>
+            <th>Studio</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="compare-section"><td colspan="4">Clientes &amp; fiches</td></tr>
+          <tr>
+            <th>Clientes actives</th>
+            <td data-label="Essentiel">30</td>
+            <td data-label="Pro">Illimitées</td>
+            <td data-label="Studio">Illimitées</td>
+          </tr>
+          <tr>
+            <th>Analyse colorimétrique</th>
+            <td data-label="Essentiel"><span class="check"></span></td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Morphologie &amp; silhouette</th>
+            <td data-label="Essentiel"><span class="check"></span></td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Photos avant / après</th>
+            <td data-label="Essentiel">Illimitées</td>
+            <td data-label="Pro">Illimitées</td>
+            <td data-label="Studio">Illimitées</td>
+          </tr>
+          <tr>
+            <th>Garde-robe virtuelle</th>
+            <td class="dash" data-label="Essentiel">—</td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+
+          <tr class="compare-section"><td colspan="4">Séances &amp; suivi</td></tr>
+          <tr>
+            <th>Agenda &amp; séances illimitées</th>
+            <td data-label="Essentiel"><span class="check"></span></td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Templates de séance</th>
+            <td data-label="Essentiel">Standards</td>
+            <td data-label="Pro">Personnalisables</td>
+            <td data-label="Studio">Personnalisables</td>
+          </tr>
+          <tr>
+            <th>Suivi d'objectifs</th>
+            <td class="dash" data-label="Essentiel">—</td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Partage cliente (résumés)</th>
+            <td data-label="Essentiel"><span class="check"></span></td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+
+          <tr class="compare-section"><td colspan="4">Business</td></tr>
+          <tr>
+            <th>Devis &amp; factures</th>
+            <td data-label="Essentiel"><span class="check"></span></td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Branding personnalisé</th>
+            <td class="dash" data-label="Essentiel">—</td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Tableau de bord &amp; analyses</th>
+            <td data-label="Essentiel">Basique</td>
+            <td data-label="Pro">Avancé</td>
+            <td data-label="Studio">Consolidé équipe</td>
+          </tr>
+          <tr>
+            <th>Application mobile</th>
+            <td class="dash" data-label="Essentiel">—</td>
+            <td data-label="Pro"><span class="check"></span></td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+
+          <tr class="compare-section"><td colspan="4">Équipe &amp; support</td></tr>
+          <tr>
+            <th>Coachs inclus</th>
+            <td data-label="Essentiel">1</td>
+            <td data-label="Pro">1</td>
+            <td data-label="Studio">5</td>
+          </tr>
+          <tr>
+            <th>Rôles et permissions</th>
+            <td class="dash" data-label="Essentiel">—</td>
+            <td class="dash" data-label="Pro">—</td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Account manager dédié</th>
+            <td class="dash" data-label="Essentiel">—</td>
+            <td class="dash" data-label="Pro">—</td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+          <tr>
+            <th>Support</th>
+            <td data-label="Essentiel">Email</td>
+            <td data-label="Pro">Email prioritaire</td>
+            <td data-label="Studio">Email + téléphone</td>
+          </tr>
+          <tr>
+            <th>Accès API</th>
+            <td class="dash" data-label="Essentiel">—</td>
+            <td class="dash" data-label="Pro">—</td>
+            <td data-label="Studio"><span class="check"></span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq">
+      <h2 class="faq__title">Questions fréquentes</h2>
+
+      <details class="faq-item">
+        <summary>L'essai gratuit nécessite-t-il une carte bancaire ?</summary>
+        <p class="faq-item__body">
+          Non. Vous accédez à toutes les fonctionnalités de l'offre Pro pendant 14 jours, sans renseigner de moyen de paiement. À la fin de l'essai, vous choisissez de continuer ou non.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Puis-je changer d'offre à tout moment ?</summary>
+        <p class="faq-item__body">
+          Oui. Vous pouvez passer d'une offre à l'autre à tout moment. En cas de mise à niveau, vous payez la différence au prorata. En cas de rétrogradation, le changement prend effet à la prochaine échéance.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Mes données sont-elles hébergées en France ?</summary>
+        <p class="faq-item__body">
+          Oui. Tous les serveurs Miroia sont localisés en France (Paris) chez un hébergeur certifié. Vos données et celles de vos clientes ne quittent jamais le territoire européen.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Comment importer mes données depuis un autre outil ?</summary>
+        <p class="faq-item__body">
+          Pour les offres Pro et Studio, notre équipe vous accompagne dans la migration depuis Notion, Airtable, Google Sheets ou tout autre outil. Comptez 1 à 3 jours selon le volume.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Y a-t-il un engagement minimum ?</summary>
+        <p class="faq-item__body">
+          Aucun. Les abonnements mensuels sont résiliables à tout moment. Les abonnements annuels sont remboursés au prorata les 30 premiers jours.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Que se passe-t-il à la fin de mon essai ?</summary>
+        <p class="faq-item__body">
+          Vous recevez un rappel 3 jours avant la fin. Si vous ne souscrivez pas, votre compte passe en lecture seule pendant 30 jours — vous pouvez exporter toutes vos données librement.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Mes clientes peuvent-elles avoir accès à leurs données ?</summary>
+        <p class="faq-item__body">
+          Oui. Vous pouvez partager des résumés de séance, des recommandations et leurs documents directement par email depuis leur fiche, en un clic.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Proposez-vous une formation à la prise en main ?</summary>
+        <p class="faq-item__body">
+          Pour les offres Pro, vous accédez à notre centre de formation en ligne. Pour Studio, nous organisons une session d'onboarding personnalisée d'une heure avec votre équipe.
+        </p>
+      </details>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" id="cta" style="margin-top:120px;">
+      <div class="cta__inner">
+        <h2 class="cta__title">Prête à essayer ?</h2>
+        <p class="cta__sub">14 jours d'essai gratuit. Sans carte bancaire. Sans engagement.</p>
+        <div class="cta__buttons">
+          <a class="btn btn--prism" href="#">Essayer gratuitement</a>
+          <a class="btn btn--ghost" href="#">Demander une démo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__top">
+        <a href="index.html" class="footer__logo">
+          <span class="footer__logo-mark"></span>
+          Miroia
+        </a>
+        <span class="footer__status">
+          <span class="footer__status-dot"></span>
+          Tous les systèmes opérationnels
+        </span>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Produit</h4>
+          <ul>
+            <li><a href="produit.html">Vue d'ensemble</a></li>
+            <li><a href="produit.html#fiche">Fiche cliente</a></li>
+            <li><a href="produit.html#agenda">Agenda &amp; séances</a></li>
+            <li><a href="produit.html#business">Business</a></li>
+            <li><a href="produit.html#mobile">Application mobile</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Tarifs</h4>
+          <ul>
+            <li><a href="tarifs.html">Offres &amp; prix</a></li>
+            <li><a href="#cta">Essai gratuit</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="ressources.html">Blog</a></li>
+            <li><a href="ressources.html">Guides</a></li>
+            <li><a href="ressources.html">Centre d'aide</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="index.html#manifest">Notre vision</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="#">CGU</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© Miroia 2025</p>
+        <p>Conçu pour les coachs en image, partout en France.</p>
+      </div>
+    </footer>
+
+  </div><!-- .page -->
+
+
+  <script>
+    // ============ PRICING TOGGLE ============
+    (() => {
+      const toggle = document.getElementById('pricingToggle');
+      if (!toggle) return;
+      const buttons = toggle.querySelectorAll('button');
+      const amounts = document.querySelectorAll('.pricing-card__price .amount');
+      const periods = document.querySelectorAll('.pricing-card__price .period');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.toggle('active', b === btn));
+          const period = btn.dataset.period;
+          amounts.forEach(a => {
+            a.textContent = a.dataset[period];
+          });
+          periods.forEach(p => {
+            p.textContent = period === 'yearly' ? '/mois, facturé annuellement' : '/mois';
+          });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
