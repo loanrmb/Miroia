@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miroia — Le CRM des coachs en image</title>
-  <meta name="description" content="Gérez vos clientes, séances, analyses et factures en un seul endroit. Conçu exclusivement pour les coachs en image." />
+  <title>Miroia — Le système pensé pour les coachs en image</title>
+  <meta name="description" content="Centralisez clientes, séances, analyses et facturation. Le seul CRM conçu spécifiquement pour les coachs en image." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -12,304 +12,153 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page" data-framer-name="Desktop">
 
-    <!-- ============ NAVIGATION ============ -->
-    <nav class="nav" data-framer-name="Nav">
-      <div class="nav__wrapper">
-        <a class="nav__logo" href="/" aria-label="Miroia — Accueil">
-          <div class="nav__logo-mark">
-            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 2C8 2 4 5 4 9C4 11.2 5.8 13 8 13C10.2 13 12 11.2 12 9C12 5 8 2 8 2Z" fill="white" fill-opacity="0.9"/>
-              <path d="M8 13C8 13 5 11 5 9" stroke="white" stroke-opacity="0.5" stroke-width="1" stroke-linecap="round"/>
-            </svg>
-          </div>
-          Miro<span>ia</span>
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav">
+    <div class="nav__wrapper">
+      <a class="nav__logo" href="/" aria-label="Miroia">
+        <span class="nav__logo-mark"></span>
+        Miroia
+      </a>
+      <div class="nav__links">
+        <a href="#produit">Produit</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#ressources">Ressources</a>
+        <a href="#manifest">Notre vision</a>
+      </div>
+      <a class="nav__cta" href="#cta">Essayer gratuitement</a>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- ============================================
+         SECTION 1 — HERO (Linear-inspired)
+         ============================================ -->
+    <section class="hero">
+      <div class="hero__top">
+        <h1 class="hero__title" id="heroTitle">Le système pensé pour les coachs en image</h1>
+        <a class="hero__pill" href="#manifest">
+          <span class="hero__pill-dot"></span>
+          Pourquoi un outil dédié <span class="hero__pill-arrow">→</span>
         </a>
-        <button class="nav__menu" aria-label="Ouvrir le menu">
-          <span class="nav__menu-line"></span>
-          <span class="nav__menu-line"></span>
-        </button>
       </div>
-    </nav>
+      <p class="hero__sub">
+        Centralisez vos clientes, séances, analyses colorimétriques et facturation. Conçu pour celles qui transforment leur passion en activité durable.
+      </p>
 
-    <!-- ============ HERO ============ -->
-    <section class="hero" data-framer-name="Header">
-      <div class="hero__wrapper">
-        <div class="hero__content">
-          <div class="hero__text">
-            <h1 class="hero__title">
-              Le seul CRM pensé <em>pour</em> les coachs en image
-            </h1>
-          </div>
-          <div class="hero__buttons">
-            <a class="btn btn--primary" href="#" data-appear-id="cta1">
-              Commencer gratuitement
-            </a>
-            <a class="btn btn--outline" href="#" data-appear-id="cta2">
-              Voir la démo
-            </a>
-          </div>
-        </div>
-        <div class="hero__visual" data-appear-id="phone">
-          <div class="hero__phone">
-            <!-- CRM UI Mockup (replace with real screenshot) -->
-            <div class="crm-mock">
-              <!-- Sidebar -->
-              <div class="crm-mock__sidebar">
-                <div class="crm-mock__logo">Miro<span>ia</span></div>
-                <div class="crm-nav-item active">
-                  <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" rx="1" fill="currentColor"/><rect x="9" y="2" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/><rect x="2" y="9" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/><rect x="9" y="9" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/></svg>
-                  Dashboard
-                </div>
-                <div class="crm-nav-item">
-                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  Clientes
-                </div>
-                <div class="crm-nav-item">
-                  <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 7h6M5 9.5h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                  Séances
-                </div>
-                <div class="crm-nav-item">
-                  <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 6h6M5 9h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                  Factures
-                </div>
-                <div class="crm-nav-item">
-                  <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 3V2M11 3V2M2 7h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                  Agenda
-                </div>
-                <div class="crm-nav-item">
-                  <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="2" width="5" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="8" width="5" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="5" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
-                  Analyses
-                </div>
-              </div>
+      <div class="hero__visual">
+        <!-- CRM dashboard mockup — replace with real screenshot when ready -->
+        <div class="crm-mock">
 
-              <!-- Main content -->
-              <div class="crm-mock__main">
-                <div class="crm-main-header">
-                  <h3>Tableau de bord</h3>
-                  <div class="crm-pill">Mai 2025</div>
-                </div>
-                <div class="crm-cards">
-                  <div class="crm-stat">
-                    <div class="crm-stat__label">Clientes actives</div>
-                    <div class="crm-stat__value">24</div>
-                    <div class="crm-stat__sub">+3 ce mois</div>
-                  </div>
-                  <div class="crm-stat">
-                    <div class="crm-stat__label">Séances ce mois</div>
-                    <div class="crm-stat__value">18</div>
-                    <div class="crm-stat__sub">4 à venir</div>
-                  </div>
-                  <div class="crm-stat">
-                    <div class="crm-stat__label">Chiffre d'affaires</div>
-                    <div class="crm-stat__value">3 840€</div>
-                    <div class="crm-stat__sub">↑ 12% vs avril</div>
-                  </div>
-                </div>
-                <div class="crm-clients">
-                  <div class="crm-client-row">
-                    <div class="crm-avatar">SL</div>
-                    <div class="crm-client-info">
-                      <div class="crm-client-name">Sophie Lenoir</div>
-                      <div class="crm-client-meta">Analyse colorimétrique — 12 mai 2025</div>
-                    </div>
-                    <div class="crm-tag crm-tag--active">En cours</div>
-                  </div>
-                  <div class="crm-client-row">
-                    <div class="crm-avatar">CM</div>
-                    <div class="crm-client-info">
-                      <div class="crm-client-name">Camille Mercier</div>
-                      <div class="crm-client-meta">Shopping & garde-robe — 8 mai 2025</div>
-                    </div>
-                    <div class="crm-tag crm-tag--pending">À facturer</div>
-                  </div>
-                  <div class="crm-client-row">
-                    <div class="crm-avatar">AL</div>
-                    <div class="crm-client-info">
-                      <div class="crm-client-name">Aurélie Blanc</div>
-                      <div class="crm-client-meta">Coaching complet — 3 séances</div>
-                    </div>
-                    <div class="crm-tag crm-tag--active">En cours</div>
-                  </div>
-                  <div class="crm-client-row">
-                    <div class="crm-avatar">MR</div>
-                    <div class="crm-client-info">
-                      <div class="crm-client-name">Marie Rousseau</div>
-                      <div class="crm-client-meta">Bilan style — 14 avril 2025</div>
-                    </div>
-                    <div class="crm-tag crm-tag--archive">Terminé</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right panel — client detail -->
-              <div class="crm-mock__panel">
-                <div class="crm-panel-title">Sophie Lenoir</div>
-                <div class="crm-divider"></div>
-                <div class="crm-swatches">
-                  <div style="font-size:11px;color:var(--color-text-subtle);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Colorimétrie</div>
-                  <div class="crm-swatch-row">
-                    <div class="crm-swatch-label">Dominant</div>
-                    <div class="crm-swatch" style="background:#d4956b;"></div>
-                    <div class="crm-swatch" style="background:#c4773d;"></div>
-                    <div class="crm-swatch" style="background:#9e5e28;"></div>
-                  </div>
-                  <div class="crm-swatch-row">
-                    <div class="crm-swatch-label">Complémt.</div>
-                    <div class="crm-swatch" style="background:#3d5a8a;"></div>
-                    <div class="crm-swatch" style="background:#2d4a6a;"></div>
-                    <div class="crm-swatch" style="background:#8a3d50;"></div>
-                  </div>
-                  <div class="crm-swatch-row">
-                    <div class="crm-swatch-label">Neutre</div>
-                    <div class="crm-swatch" style="background:#f5f0e8;"></div>
-                    <div class="crm-swatch" style="background:#e8ddd0;"></div>
-                    <div class="crm-swatch" style="background:#2a2520;"></div>
-                  </div>
-                </div>
-                <div class="crm-divider"></div>
-                <div class="crm-session-item">
-                  <div class="crm-session-date">12 mai 2025</div>
-                  <div class="crm-session-title">Analyse colorimétrique</div>
-                  <div class="crm-session-status">1h30 · 180€</div>
-                </div>
-                <div class="crm-session-item">
-                  <div class="crm-session-date">19 mai 2025</div>
-                  <div class="crm-session-title">Shopping accompagné</div>
-                  <div class="crm-session-status">3h · 320€</div>
-                </div>
-                <div class="crm-divider"></div>
-                <div class="crm-photos-grid">
-                  <div class="crm-photo crm-photo-before"></div>
-                  <div class="crm-photo crm-photo-after"></div>
-                  <div class="crm-photo" style="background:linear-gradient(135deg,#2a2218,#1d1a16);"></div>
-                  <div class="crm-photo" style="background:linear-gradient(135deg,#1a1614,#221c14);"></div>
-                </div>
-              </div>
+          <div class="crm-mock__sidebar">
+            <div class="crm-mock__logo">Miro<span>ia</span></div>
+            <div class="crm-nav-item active">
+              <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" rx="1" fill="currentColor"/><rect x="9" y="2" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/><rect x="2" y="9" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/><rect x="9" y="9" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/></svg>
+              Tableau de bord
+            </div>
+            <div class="crm-nav-item">
+              <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Clientes
+            </div>
+            <div class="crm-nav-item">
+              <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 3V2M11 3V2M2 7h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Agenda
+            </div>
+            <div class="crm-nav-item">
+              <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 7h6M5 9.5h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Séances
+            </div>
+            <div class="crm-nav-item">
+              <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 6h6M5 9h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Factures
+            </div>
+            <div class="crm-nav-item">
+              <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="2" width="5" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="8" width="5" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="5" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+              Analyses
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============ STICKY SCROLL SECTION ============ -->
-    <section class="dp" id="designPublish" data-framer-name="Sticky Scroll Features">
-      <!-- Colonne gauche -->
-      <div class="dp-left">
-        <h2 class="dp-title">Gérez et développez<br/><em>en un seul endroit</em></h2>
-
-        <div class="dp-items">
-          <article class="dp-item is-active" data-target="v1">
-            <h3>Fiches clientes complètes</h3>
-            <p>Colorimétrie, morphologie, personnalité de style, objectifs, préférences. Tout ce que vous avez appris sur chaque cliente, centralisé et accessible en deux clics.</p>
-          </article>
-
-          <article class="dp-item" data-target="v2">
-            <h3>Photos avant / après</h3>
-            <p>Stockez et organisez les photos de chaque séance directement dans la fiche cliente. Montrez les transformations à vos clientes et valorisez votre travail.</p>
-          </article>
-
-          <article class="dp-item" data-target="v3">
-            <h3>Agenda & suivi des séances</h3>
-            <p>Planifiez vos séances, consignez vos notes, suivez l'historique de chaque cliente. Retrouvez instantanément ce que vous avez abordé lors de chaque rendez-vous.</p>
-          </article>
-
-          <article class="dp-item" data-target="v4">
-            <h3>Facturation intégrée</h3>
-            <p>Créez devis et factures professionnels en quelques secondes, sans quitter Miroia. Envoyez par email, suivez les paiements, relancez automatiquement.</p>
-          </article>
-        </div>
-      </div>
-
-      <!-- Colonne droite (sticky) -->
-      <div class="dp-right">
-        <div class="dp-visuals">
-
-          <!-- v1 — Fiches clientes -->
-          <div class="dp-visual is-active" id="v1">
-            <!-- Replace with: <img src="assets/feature-clients.png"> or <video> -->
-            <div class="mini-card mini-card--lg">
-              <div class="mini-card__row">
-                <div class="mini-dot" style="background:#c4773d;"></div>
-                <div class="mini-label">Fiche cliente</div>
+          <div class="crm-mock__main">
+            <div class="crm-main-header">
+              <h3>Tableau de bord</h3>
+              <div class="crm-pill">Mai 2025</div>
+            </div>
+            <div class="crm-cards">
+              <div class="crm-stat">
+                <div class="crm-stat__label">Clientes actives</div>
+                <div class="crm-stat__value">24</div>
+                <div class="crm-stat__sub">+3 ce mois</div>
               </div>
-              <div class="mini-bar"><div class="mini-bar__fill" style="width:85%;"></div></div>
-              <div class="mini-bar"><div class="mini-bar__fill" style="width:60%;"></div></div>
-              <div class="mini-bar"><div class="mini-bar__fill" style="width:75%;"></div></div>
-              <div class="mini-bar"><div class="mini-bar__fill" style="width:50%;"></div></div>
-              <div class="mini-avatar-row">
-                <div class="mini-avatar" style="background:linear-gradient(135deg,#c4773d,#9e5e28);">S</div>
-                <div class="mini-avatar" style="background:linear-gradient(135deg,#3d5a8a,#2d4a6a);">C</div>
-                <div class="mini-avatar" style="background:linear-gradient(135deg,#8a3d50,#6a2d40);">A</div>
-                <div class="mini-avatar" style="background:linear-gradient(135deg,#4a6a3d,#2d4a2d);">M</div>
+              <div class="crm-stat">
+                <div class="crm-stat__label">Séances ce mois</div>
+                <div class="crm-stat__value">18</div>
+                <div class="crm-stat__sub">4 à venir</div>
+              </div>
+              <div class="crm-stat">
+                <div class="crm-stat__label">Chiffre d'affaires</div>
+                <div class="crm-stat__value">3 840€</div>
+                <div class="crm-stat__sub">↑ 12% vs avril</div>
+              </div>
+            </div>
+            <div class="crm-clients">
+              <div class="crm-client-row">
+                <div class="crm-avatar crm-avatar--violet">SL</div>
+                <div class="crm-client-info">
+                  <div class="crm-client-name">Sophie Lenoir</div>
+                  <div class="crm-client-meta">Analyse colorimétrique — 12 mai 2025</div>
+                </div>
+                <div class="crm-tag crm-tag--active">En cours</div>
+              </div>
+              <div class="crm-client-row">
+                <div class="crm-avatar crm-avatar--pink">CM</div>
+                <div class="crm-client-info">
+                  <div class="crm-client-name">Camille Mercier</div>
+                  <div class="crm-client-meta">Shopping & garde-robe — 8 mai 2025</div>
+                </div>
+                <div class="crm-tag crm-tag--pending">À facturer</div>
+              </div>
+              <div class="crm-client-row">
+                <div class="crm-avatar crm-avatar--peach">AB</div>
+                <div class="crm-client-info">
+                  <div class="crm-client-name">Aurélie Blanc</div>
+                  <div class="crm-client-meta">Coaching complet — 3 séances</div>
+                </div>
+                <div class="crm-tag crm-tag--active">En cours</div>
+              </div>
+              <div class="crm-client-row">
+                <div class="crm-avatar crm-avatar--cyan">MR</div>
+                <div class="crm-client-info">
+                  <div class="crm-client-name">Marie Rousseau</div>
+                  <div class="crm-client-meta">Bilan style — 14 avril 2025</div>
+                </div>
+                <div class="crm-tag crm-tag--archive">Terminé</div>
               </div>
             </div>
           </div>
 
-          <!-- v2 — Photos avant/après -->
-          <div class="dp-visual" id="v2">
-            <!-- Replace with: <img src="assets/feature-photos.png"> -->
-            <div class="before-after before-after--lg">
-              <div class="before-after__side">
-                <div class="before-after__img ba-before">
-                  <span class="before-after__label">Avant</span>
-                </div>
+          <div class="crm-mock__panel">
+            <div class="crm-panel-title">Sophie Lenoir</div>
+            <div class="crm-divider"></div>
+            <div class="crm-section-label">Colorimétrie</div>
+            <div class="crm-swatches">
+              <div class="crm-swatch-row">
+                <div class="crm-swatch-label">Dominant</div>
+                <div class="crm-swatch" style="background:#b266ff;"></div>
+                <div class="crm-swatch" style="background:#9555cc;"></div>
+                <div class="crm-swatch" style="background:#7733aa;"></div>
               </div>
-              <div class="before-after__side">
-                <div class="before-after__img ba-after">
-                  <span class="before-after__label">Après</span>
-                </div>
+              <div class="crm-swatch-row">
+                <div class="crm-swatch-label">Complémt.</div>
+                <div class="crm-swatch" style="background:#ff9966;"></div>
+                <div class="crm-swatch" style="background:#cc7755;"></div>
+                <div class="crm-swatch" style="background:#ff6699;"></div>
               </div>
-            </div>
-          </div>
-
-          <!-- v3 — Agenda -->
-          <div class="dp-visual" id="v3">
-            <!-- Replace with: <img src="assets/feature-sessions.png"> -->
-            <div class="mini-calendar mini-calendar--lg">
-              <div class="mini-cal-header">Mai 2025</div>
-              <div class="mini-cal-grid">
-                <div class="mini-cal-day">L</div><div class="mini-cal-day">M</div><div class="mini-cal-day">M</div><div class="mini-cal-day">J</div><div class="mini-cal-day">V</div><div class="mini-cal-day">S</div><div class="mini-cal-day">D</div>
-                <div class="mini-cal-day"></div><div class="mini-cal-day"></div><div class="mini-cal-day">1</div><div class="mini-cal-day">2</div><div class="mini-cal-day">3</div><div class="mini-cal-day has-event">4</div><div class="mini-cal-day">5</div>
-                <div class="mini-cal-day">6</div><div class="mini-cal-day">7</div><div class="mini-cal-day today">8</div><div class="mini-cal-day">9</div><div class="mini-cal-day has-event">10</div><div class="mini-cal-day">11</div><div class="mini-cal-day has-event">12</div>
-                <div class="mini-cal-day">13</div><div class="mini-cal-day has-event">14</div><div class="mini-cal-day">15</div><div class="mini-cal-day">16</div><div class="mini-cal-day">17</div><div class="mini-cal-day">18</div><div class="mini-cal-day has-event">19</div>
-              </div>
-              <div class="mini-event">
-                <div class="mini-event__title">Analyse colorimétrique — Sophie L.</div>
-                <div class="mini-event__time">14h00 · 1h30</div>
-              </div>
-              <div class="mini-event">
-                <div class="mini-event__title">Shopping — Camille M.</div>
-                <div class="mini-event__time">10h00 · 3h</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- v4 — Facturation -->
-          <div class="dp-visual" id="v4">
-            <!-- Replace with: <img src="assets/feature-billing.png"> -->
-            <div class="mini-invoice mini-invoice--lg">
-              <div class="mini-inv-header">
-                <div class="mini-inv-title">Facture #042</div>
-                <div class="mini-inv-badge">Payée</div>
-              </div>
-              <div class="mini-inv-line">
-                <span class="mini-inv-desc">Analyse colorimétrique</span>
-                <span class="mini-inv-price">180 €</span>
-              </div>
-              <div class="mini-inv-line">
-                <span class="mini-inv-desc">Shopping accompagné</span>
-                <span class="mini-inv-price">320 €</span>
-              </div>
-              <div class="mini-inv-line">
-                <span class="mini-inv-desc">Capsule wardrobe</span>
-                <span class="mini-inv-price">240 €</span>
-              </div>
-              <div class="mini-inv-divider"></div>
-              <div class="mini-inv-total">
-                <span class="mini-inv-total-label">Total</span>
-                <span class="mini-inv-total-price">740 €</span>
+              <div class="crm-swatch-row">
+                <div class="crm-swatch-label">Neutre</div>
+                <div class="crm-swatch" style="background:#f5f5f7;"></div>
+                <div class="crm-swatch" style="background:#a0a0a8;"></div>
+                <div class="crm-swatch" style="background:#2a2a30;"></div>
               </div>
             </div>
           </div>
@@ -318,257 +167,282 @@
       </div>
     </section>
 
-    <!-- ============ TOOLS SLIDER ============ -->
-    <section class="slider" data-framer-name="Tools Slider">
-      <header class="section-header">
-        <h2>La beauté est dans les <em>détails</em></h2>
+
+    <!-- ============================================
+         SECTION 2 — BEAUTY CAROUSEL (Framer-inspired)
+         ============================================ -->
+    <section class="beauty" id="produit">
+      <header class="section-head">
+        <h2 class="section-head__title">Tout est dans<br/>le détail</h2>
+        <p class="section-head__sub">
+          Des outils précis pour les gestes quotidiens du coaching d'image. Pensés avec des coachs, testés sur le terrain.
+        </p>
       </header>
-      <div class="slider__viewport">
-        <ul class="slider__track" id="sliderTrack">
 
-          <li class="slide">
-            <div class="slide__row">
-              <div class="slide__item">
-                <div class="slide__visual">
-                  <!-- Replace with: assets/tool-colorimetrie.png -->
-                  <div class="slide-vis" style="background:linear-gradient(135deg,#1d1a16,#2a2218);">
-                    <div class="slide-palette">
-                      <div class="slide-palette__swatch" style="background:#d4956b;"></div>
-                      <div class="slide-palette__swatch" style="background:#c4773d;"></div>
-                      <div class="slide-palette__swatch" style="background:#9e5e28;"></div>
-                      <div class="slide-palette__swatch" style="background:#3d5a8a;"></div>
-                      <div class="slide-palette__swatch" style="background:#8a3d50;"></div>
-                    </div>
-                  </div>
-                </div>
-                <h6>Analyse colorimétrique</h6>
-                <p>Renseignez les tons chauds, froids, la saison chromatique et les couleurs à éviter. La palette s'affiche dans la fiche et accompagne chaque séance.</p>
-              </div>
-              <div class="slide__item">
-                <div class="slide__visual">
-                  <!-- Replace with: assets/tool-morpho.png -->
-                  <div class="slide-vis" style="background:linear-gradient(135deg,#161410,#221c14);">
-                    <div class="slide-morpho">
-                      <div class="slide-morpho__shape slide-morpho__shape--oval"></div>
-                      <div class="slide-morpho__shape slide-morpho__shape--rect"></div>
-                      <div class="slide-morpho__shape slide-morpho__shape--tri"></div>
-                    </div>
-                  </div>
-                </div>
-                <h6>Morphologie & silhouette</h6>
-                <p>Enregistrez le morphotype, les zones à valoriser ou à équilibrer, les coupes recommandées. Retrouvez ces informations en un clin d'œil avant chaque shopping.</p>
+      <div class="beauty__viewport">
+        <ul class="beauty__track" id="beautyTrack">
+
+          <li class="beauty__card">
+            <div class="beauty__visual">
+              <div class="bv bv-palette">
+                <span style="background:#b266ff;"></span>
+                <span style="background:#ff6699;"></span>
+                <span style="background:#ff9966;"></span>
+                <span style="background:#66ccff;"></span>
+                <span style="background:#f5f0e8;"></span>
               </div>
             </div>
+            <p class="beauty__caption">
+              <strong>Colorimétrie.</strong> Identifiez les saisons chromatiques et palettes en quelques clics.
+            </p>
           </li>
 
-          <li class="slide">
-            <div class="slide__row">
-              <div class="slide__item">
-                <div class="slide__visual">
-                  <!-- Replace with: assets/tool-notes.png -->
-                  <div class="slide-vis" style="background:linear-gradient(135deg,#18161a,#241e22);">
-                    <div class="slide-doc">
-                      <div class="slide-doc__line"></div>
-                      <div class="slide-doc__line slide-doc__line--accent"></div>
-                      <div class="slide-doc__line"></div>
-                      <div class="slide-doc__line" style="width:50%;"></div>
-                      <div class="slide-doc__line slide-doc__line--accent" style="width:70%;"></div>
-                      <div class="slide-doc__line" style="width:85%;"></div>
-                    </div>
-                  </div>
-                </div>
-                <h6>Notes de séance enrichies</h6>
-                <p>Rédigez des comptes-rendus de séance structurés. Ajoutez des étiquettes, des liens, des références photos. Partagez un résumé à votre cliente en un clic.</p>
-              </div>
-              <div class="slide__item">
-                <div class="slide__visual">
-                  <!-- Replace with: assets/tool-objectifs.png -->
-                  <div class="slide-vis" style="background:linear-gradient(135deg,#141614,#1a2018);">
-                    <div class="mini-card" style="width:75%;">
-                      <div style="font-size:10px;color:var(--color-text-subtle);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">Objectifs</div>
-                      <div class="mini-bar"><div class="mini-bar__fill" style="width:90%;"></div></div>
-                      <div style="font-size:9px;color:var(--color-copper);margin-bottom:6px;">Garde-robe capsule · 90%</div>
-                      <div class="mini-bar"><div class="mini-bar__fill" style="width:45%;"></div></div>
-                      <div style="font-size:9px;color:var(--color-text-subtle);margin-bottom:6px;">Prise de confiance · 45%</div>
-                      <div class="mini-bar"><div class="mini-bar__fill" style="width:70%;"></div></div>
-                      <div style="font-size:9px;color:var(--color-text-subtle);">Style professionnel · 70%</div>
-                    </div>
-                  </div>
-                </div>
-                <h6>Suivi des objectifs</h6>
-                <p>Définissez les objectifs de coaching de chaque cliente et visualisez leur progression au fil des séances. Montrez concrètement la valeur de votre accompagnement.</p>
+          <li class="beauty__card">
+            <div class="beauty__visual">
+              <div class="bv bv-shapes">
+                <span></span><span></span><span></span>
               </div>
             </div>
+            <p class="beauty__caption">
+              <strong>Morphologie.</strong> Structurez chaque silhouette avec des templates dédiés.
+            </p>
           </li>
 
-          <li class="slide">
-            <div class="slide__row">
-              <div class="slide__item">
-                <div class="slide__visual">
-                  <!-- Replace with: assets/tool-docs.png -->
-                  <div class="slide-vis" style="background:linear-gradient(135deg,#1d1a16,#161410);">
-                    <div class="mini-invoice" style="width:75%;">
-                      <div style="font-size:10px;color:var(--color-text-subtle);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">Devis #018</div>
-                      <div class="mini-inv-line">
-                        <span class="mini-inv-desc">Pack Découverte</span>
-                        <span class="mini-inv-price">350 €</span>
-                      </div>
-                      <div class="mini-inv-line">
-                        <span class="mini-inv-desc">Shopping 3h</span>
-                        <span class="mini-inv-price">320 €</span>
-                      </div>
-                      <div class="mini-inv-divider"></div>
-                      <div class="mini-inv-total">
-                        <span class="mini-inv-total-label">Total</span>
-                        <span class="mini-inv-total-price">670 €</span>
-                      </div>
-                    </div>
-                  </div>
+          <li class="beauty__card">
+            <div class="beauty__visual">
+              <div class="bv">
+                <div class="bv-doc">
+                  <span></span>
+                  <span class="accent"></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <h6>Devis & documents pro</h6>
-                <p>Créez des devis à votre image en quelques secondes. Vos clientes reçoivent un document professionnel par email et acceptent en ligne. Vous êtes payée plus vite.</p>
-              </div>
-              <div class="slide__item">
-                <div class="slide__visual">
-                  <!-- Replace with: assets/tool-dashboard.png -->
-                  <div class="slide-vis" style="background:linear-gradient(135deg,#18161a,#141614);">
-                    <div class="mini-card" style="width:75%;">
-                      <div style="font-size:10px;color:var(--color-text-subtle);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;">Ce mois</div>
-                      <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--color-text);">3 840€</span>
-                        <span style="font-size:10px;color:#4dc963;align-self:flex-end;">↑12%</span>
-                      </div>
-                      <div class="mini-bar" style="height:4px;"><div class="mini-bar__fill" style="width:78%;"></div></div>
-                      <div style="font-size:9px;color:var(--color-text-subtle);margin-top:4px;">Objectif mensuel · 78%</div>
-                    </div>
-                  </div>
-                </div>
-                <h6>Tableau de bord & analyses</h6>
-                <p>Visualisez votre chiffre d'affaires, le taux de fidélisation, les séances par type de prestation. Prenez de meilleures décisions grâce aux données de votre activité.</p>
               </div>
             </div>
+            <p class="beauty__caption">
+              <strong>Notes de séance.</strong> Rédigez des comptes-rendus structurés et partageables.
+            </p>
+          </li>
+
+          <li class="beauty__card">
+            <div class="beauty__visual">
+              <div class="bv bv-objectives">
+                <div class="bv-bar-wrap">
+                  <div class="bv-bar"><span style="width:90%;"></span></div>
+                  <div class="bv-bar-label">Garde-robe capsule · 90%</div>
+                </div>
+                <div class="bv-bar-wrap">
+                  <div class="bv-bar"><span style="width:60%;"></span></div>
+                  <div class="bv-bar-label">Confiance & posture · 60%</div>
+                </div>
+                <div class="bv-bar-wrap">
+                  <div class="bv-bar"><span style="width:75%;"></span></div>
+                  <div class="bv-bar-label">Style professionnel · 75%</div>
+                </div>
+              </div>
+            </div>
+            <p class="beauty__caption">
+              <strong>Suivi d'objectifs.</strong> Visualisez la progression de chaque cliente au fil des séances.
+            </p>
+          </li>
+
+          <li class="beauty__card">
+            <div class="beauty__visual">
+              <div class="bv">
+                <div class="bv-invoice">
+                  <div class="bv-invoice-row"><span>Analyse colorimétrique</span><span>180 €</span></div>
+                  <div class="bv-invoice-row"><span>Shopping accompagné</span><span>320 €</span></div>
+                  <div class="bv-invoice-row"><span>Capsule wardrobe</span><span>240 €</span></div>
+                  <div class="bv-invoice-row total"><span>Total</span><span class="price-prism">740 €</span></div>
+                </div>
+              </div>
+            </div>
+            <p class="beauty__caption">
+              <strong>Devis & factures.</strong> Documents pro à votre image, en quelques secondes.
+            </p>
+          </li>
+
+          <li class="beauty__card">
+            <div class="beauty__visual">
+              <div class="bv">
+                <div class="bv-dashboard">
+                  <div class="bv-dashboard-num">3 840 €</div>
+                  <div class="bv-dashboard-sub">Chiffre d'affaires de mai · ↑ 12%</div>
+                  <div class="bv-bar"><span style="width:78%;"></span></div>
+                </div>
+              </div>
+            </div>
+            <p class="beauty__caption">
+              <strong>Tableau de bord.</strong> Pilotez votre activité avec des chiffres clairs et actionnables.
+            </p>
           </li>
 
         </ul>
       </div>
-      <div class="slider__controls">
-        <button class="slider__btn" data-action="prev" aria-label="Précédent">←</button>
-        <button class="slider__btn" data-action="next" aria-label="Suivant">→</button>
-        <button class="slider__dot active" data-page="0" aria-label="Diapositive 1"></button>
-        <button class="slider__dot" data-page="1" aria-label="Diapositive 2"></button>
-        <button class="slider__dot" data-page="2" aria-label="Diapositive 3"></button>
+
+      <div class="beauty__controls">
+        <button class="beauty__btn" data-action="prev" aria-label="Précédent">←</button>
+        <button class="beauty__btn" data-action="next" aria-label="Suivant">→</button>
+        <div class="beauty__dots" id="beautyDots"></div>
       </div>
     </section>
 
-    <!-- ============ TOOLS SIDEBAR (8 cards) ============ -->
-    <section class="tools" data-framer-name="Tools Sidebar">
-      <header class="section-header">
-        <h2>Tout ce dont vous avez besoin, <em>rien de plus</em></h2>
-      </header>
-      <div class="tools__grid">
 
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">🎨</div>
-          </div>
-          <h6>Palettes colorimétrie intégrées</h6>
-          <p>Saisons chromatiques, tons chauds et froids, palettes personnalisées par cliente. Organisez et retrouvez chaque analyse en un instant.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
+    <!-- ============================================
+         SECTION 3 — SPOTLIGHT (Config-inspired)
+         ============================================ -->
+    <section class="spotlight">
+      <div class="spotlight__head">
+        <h2 class="spotlight__title">Une fiche cliente,<br/>tout votre coaching</h2>
+        <p class="spotlight__sub">
+          Centralisez colorimétrie, morphologie, photos avant/après, notes de séance et facturation dans un espace unique. Plus de fichiers éparpillés. Plus de copier-coller.
+        </p>
+      </div>
 
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">📅</div>
+      <div class="spotlight__visual">
+        <div class="spotlight__panel">
+          <!-- Replace with real fiche cliente screenshot -->
+          <div class="fc-aside">
+            <div class="fc-photo"></div>
+            <div class="fc-name">Sophie Lenoir</div>
+            <div class="fc-meta">
+              <span>📍 Bordeaux</span>
+              <span>📅 Cliente depuis mars 2025</span>
+              <span>🎯 Coaching complet — 6 séances</span>
+            </div>
+            <div class="fc-tags">
+              <span class="fc-tag">Été clair</span>
+              <span class="fc-tag">Morpho V</span>
+              <span class="fc-tag">Style romantique</span>
+            </div>
           </div>
-          <h6>Agenda synchronisé</h6>
-          <p>Planifiez vos séances, configurez des rappels automatiques pour vos clientes, et synchronisez avec Google Calendar ou Outlook en un clic.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
 
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">👗</div>
-          </div>
-          <h6>Garde-robe virtuelle</h6>
-          <p>Inventoriez les pièces clés de votre cliente. Créez des combinaisons de tenues, identifiez les manques, planifiez les achats prioritaires.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
+          <div class="fc-main">
+            <div class="fc-tabs">
+              <span class="fc-tab active">Colorimétrie</span>
+              <span class="fc-tab">Morphologie</span>
+              <span class="fc-tab">Garde-robe</span>
+              <span class="fc-tab">Séances</span>
+              <span class="fc-tab">Facturation</span>
+            </div>
 
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">📸</div>
+            <div class="fc-block">
+              <div class="fc-block-title">Palette dominante</div>
+              <div class="fc-palette-grid">
+                <div class="fc-palette-row">
+                  <span class="fc-palette-label">Tons chauds</span>
+                  <div class="fc-palette-swatch" style="background:#b266ff;"></div>
+                  <div class="fc-palette-swatch" style="background:#9555cc;"></div>
+                  <div class="fc-palette-swatch" style="background:#7733aa;"></div>
+                  <div class="fc-palette-swatch" style="background:#ff9966;"></div>
+                </div>
+                <div class="fc-palette-row">
+                  <span class="fc-palette-label">Complémt.</span>
+                  <div class="fc-palette-swatch" style="background:#66ccff;"></div>
+                  <div class="fc-palette-swatch" style="background:#3399cc;"></div>
+                  <div class="fc-palette-swatch" style="background:#ff6699;"></div>
+                  <div class="fc-palette-swatch" style="background:#cc3366;"></div>
+                </div>
+                <div class="fc-palette-row">
+                  <span class="fc-palette-label">À éviter</span>
+                  <div class="fc-palette-swatch" style="background:#8a7a4a;"></div>
+                  <div class="fc-palette-swatch" style="background:#a08855;"></div>
+                  <div class="fc-palette-swatch" style="background:#666040;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fc-block">
+              <div class="fc-block-title">Photos récentes</div>
+              <div class="fc-photos">
+                <div class="fc-photo-thumb"></div>
+                <div class="fc-photo-thumb"></div>
+                <div class="fc-photo-thumb"></div>
+                <div class="fc-photo-thumb"></div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!-- 6-feature grid -->
+      <div class="spotlight__grid">
+        <div class="feat6">
+          <div class="feat6__icon violet">◐</div>
+          <h6>Colorimétrie</h6>
+          <p>Saisons chromatiques, tons chauds et froids, couleurs à éviter. Tout est paramétrable et visualisable d'un coup d'œil.</p>
+        </div>
+        <div class="feat6">
+          <div class="feat6__icon pink">◇</div>
+          <h6>Morphologie</h6>
+          <p>Silhouettes types, coupes recommandées, zones à valoriser ou équilibrer. Retrouvez chaque détail avant un shopping.</p>
+        </div>
+        <div class="feat6">
+          <div class="feat6__icon peach">▢</div>
           <h6>Photos avant / après</h6>
-          <p>Stockage illimité de photos par cliente. Organisez par séance, comparez les transformations, exportez facilement pour votre portfolio.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
-
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">🧾</div>
-          </div>
-          <h6>Facturation sans effort</h6>
-          <p>Devis et factures personnalisés à votre charte graphique. Envoi par email, paiement en ligne, relances automatiques. Zéro compta manuelle.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
-
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">📋</div>
-          </div>
-          <h6>Templates de séance</h6>
-          <p>Construisez vos propres modèles pour chaque type de prestation — analyse, shopping, suivi. Remplissez en séance, partagez en un clic.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
-
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">📊</div>
-          </div>
-          <h6>Analyses & rapports</h6>
-          <p>Chiffre d'affaires, taux de fidélisation, types de prestations les plus rentables. Prenez des décisions éclairées pour développer votre activité.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
-
-        <article class="tool-card">
-          <div class="tool-card__visual">
-            <div class="tool-vis">📱</div>
-          </div>
-          <h6>Application mobile</h6>
-          <p>Consultez et mettez à jour les fiches clientes en déplacement — pendant un shopping, chez une cliente. Miroia vous suit partout.</p>
-          <a href="#" class="learn-more">En savoir plus</a>
-        </article>
-
+          <p>Galerie illimitée par cliente. Comparez les transformations, exportez pour votre portfolio en un clic.</p>
+        </div>
+        <div class="feat6">
+          <div class="feat6__icon cyan">≡</div>
+          <h6>Notes structurées</h6>
+          <p>Comptes-rendus de séance avec étiquettes et recherche. Retrouvez instantanément ce qui a été abordé.</p>
+        </div>
+        <div class="feat6">
+          <div class="feat6__icon violet">↺</div>
+          <h6>Historique complet</h6>
+          <p>Toutes les séances, paiements, échanges et documents en un seul endroit. Plus jamais de "où j'avais noté ça ?".</p>
+        </div>
+        <div class="feat6">
+          <div class="feat6__icon pink">↗</div>
+          <h6>Partage cliente</h6>
+          <p>Envoyez résumés, recommandations et bons cadeaux directement depuis la fiche. Vos clientes adorent le suivi.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ============ CTA BANNER ============ -->
-    <header class="cta">
-      <div class="cta__text">
-        <h5>Gérez. <em>Brillez.</em> Développez.</h5>
+
+    <!-- ============================================
+         SECTION 4 — CTA (trial + demo)
+         ============================================ -->
+    <section class="cta" id="cta">
+      <div class="cta__inner">
+        <h2 class="cta__title">Prête à exercer<br/>autrement ?</h2>
+        <p class="cta__sub">14 jours d'essai gratuit. Sans carte bancaire. Sans engagement.</p>
+        <div class="cta__buttons">
+          <a class="btn btn--prism" href="#">Essayer gratuitement</a>
+          <a class="btn btn--ghost" href="#">Demander une démo</a>
+        </div>
       </div>
-      <div class="cta__buttons">
-        <a class="btn btn--primary" href="#">Commencer gratuitement</a>
-        <a class="btn btn--outline" href="#">Voir la démo</a>
+    </section>
+
+
+    <!-- ============================================
+         SECTION 5 — MANIFEST (positioning)
+         ============================================ -->
+    <section class="manifest" id="manifest">
+      <div class="manifest__inner">
+        <div class="manifest__eyebrow">Notre vision</div>
+        <h2 class="manifest__title" id="manifestTitle">
+          <span class="manifest__line">Le coaching d'image ne se mesure pas en tableurs.</span>
+          <span class="manifest__line">Mais sans outil, on s'épuise.</span>
+          <span class="manifest__line">Miroia est l'équilibre que vous attendiez :</span>
+          <span class="manifest__line">la rigueur d'un système, <em>la sensibilité d'un métier</em>.</span>
+        </h2>
       </div>
-    </header>
+    </section>
+
 
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
       <div class="footer__top">
-        <a href="/" class="footer__logo" aria-label="Miroia">
-          <div class="footer__logo-mark"></div>
-          Miro<span>ia</span>
+        <a href="/" class="footer__logo">
+          <span class="footer__logo-mark"></span>
+          Miroia
         </a>
-        <div class="footer__social">
-          <a href="#" aria-label="Instagram">◉</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="TikTok">♪</a>
-          <a href="#" aria-label="Pinterest">℗</a>
-        </div>
-        <a href="#" class="footer__status">
-          <span class="status-dot"></span> Tous les systèmes opérationnels
-        </a>
+        <span class="footer__status">
+          <span class="footer__status-dot"></span>
+          Tous les systèmes opérationnels
+        </span>
       </div>
 
       <div class="footer__cols">
@@ -579,7 +453,6 @@
             <li><a href="#">Agenda</a></li>
             <li><a href="#">Facturation</a></li>
             <li><a href="#">Colorimétrie</a></li>
-            <li><a href="#">Garde-robe</a></li>
             <li><a href="#">Photos</a></li>
             <li><a href="#">Rapports</a></li>
           </ul>
@@ -604,92 +477,121 @@
         <div class="footer__col">
           <h4>Entreprise</h4>
           <ul>
+            <li><a href="#manifest">Notre vision</a></li>
             <li><a href="#">À propos</a></li>
             <li><a href="#">Confidentialité</a></li>
             <li><a href="#">CGU</a></li>
-            <li><a href="#">Mentions légales</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer__bottom">
-        <p>© Miroia 2025. Tous droits réservés.</p>
+        <p>© Miroia 2025</p>
         <p>Conçu pour les coachs en image, partout en France.</p>
       </div>
     </footer>
 
   </div><!-- .page -->
 
+
   <script>
-    // ============ APPEAR ANIMATIONS ============
-    document.addEventListener('DOMContentLoaded', () => {
-      const els = document.querySelectorAll('[data-appear-id]');
+    // ============ HERO TITLE — WORD-BY-WORD REVEAL ============
+    (() => {
+      const title = document.getElementById('heroTitle');
+      if (!title) return;
+      const words = title.textContent.trim().split(/\s+/);
+      title.innerHTML = words
+        .map((w, i) => `<span class="word" style="animation-delay:${0.05 + i * 0.06}s">${w}</span>`)
+        .join(' ');
+    })();
+
+    // ============ BEAUTY CAROUSEL ============
+    (() => {
+      const track = document.getElementById('beautyTrack');
+      const dotsBox = document.getElementById('beautyDots');
+      if (!track) return;
+
+      const cards = track.querySelectorAll('.beauty__card');
+      const total = cards.length;
+      let perPage = 3;
+      let current = 0;
+
+      const computePerPage = () => {
+        if (window.innerWidth <= 740) perPage = 1;
+        else if (window.innerWidth <= 1099) perPage = 2;
+        else perPage = 3;
+      };
+
+      const pages = () => Math.max(1, total - perPage + 1);
+
+      const renderDots = () => {
+        dotsBox.innerHTML = '';
+        for (let i = 0; i < pages(); i++) {
+          const d = document.createElement('button');
+          d.className = 'beauty__dot' + (i === current ? ' active' : '');
+          d.setAttribute('aria-label', `Page ${i + 1}`);
+          d.addEventListener('click', () => goTo(i));
+          dotsBox.appendChild(d);
+        }
+      };
+
+      const goTo = (n) => {
+        current = Math.max(0, Math.min(pages() - 1, n));
+        const cardWidth = cards[0].getBoundingClientRect().width + 16;
+        track.style.transform = `translateX(-${current * cardWidth}px)`;
+        dotsBox.querySelectorAll('.beauty__dot').forEach((d, i) =>
+          d.classList.toggle('active', i === current)
+        );
+      };
+
+      document.querySelectorAll('.beauty__btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          goTo(current + (btn.dataset.action === 'next' ? 1 : -1));
+        });
+      });
+
+      const init = () => {
+        computePerPage();
+        renderDots();
+        goTo(current);
+      };
+
+      window.addEventListener('resize', () => {
+        const old = perPage;
+        computePerPage();
+        if (old !== perPage) {
+          current = 0;
+          renderDots();
+        }
+        goTo(current);
+      });
+
+      init();
+    })();
+
+    // ============ MANIFEST — LINE-BY-LINE REVEAL ON SCROLL ============
+    (() => {
+      const lines = document.querySelectorAll('.manifest__line');
+      if (!lines.length) return;
+
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => {
           if (e.isIntersecting) {
-            e.target.classList.add('is-visible');
+            e.target.classList.add('is-lit');
             io.unobserve(e.target);
           }
         });
-      }, { threshold: 0.1 });
-      els.forEach(el => io.observe(el));
-
-      // Trigger hero elements immediately
-      setTimeout(() => {
-        document.querySelectorAll('[data-appear-id="cta1"],[data-appear-id="cta2"],[data-appear-id="phone"]').forEach(el => {
-          el.classList.add('is-visible');
-        });
-      }, 100);
-    });
-
-    // ============ STICKY SCROLL — INTERSECTION OBSERVER ============
-    (() => {
-      const items = document.querySelectorAll('.dp-item');
-      const visuals = document.querySelectorAll('.dp-visual');
-      if (!items.length) return;
-
-      const setActive = (id) => {
-        items.forEach(it => it.classList.toggle('is-active', it.dataset.target === id));
-        visuals.forEach(v => v.classList.toggle('is-active', v.id === id));
-      };
-
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.dataset.target);
-          }
-        });
       }, {
-        // L'item devient actif quand son centre franchit le centre du viewport
-        rootMargin: '-45% 0px -45% 0px',
+        rootMargin: '-15% 0px -25% 0px',
         threshold: 0
       });
 
-      items.forEach(it => io.observe(it));
-    })();
-
-    // ============ SLIDER ============
-    let currentSlide = 0;
-    const track = document.getElementById('sliderTrack');
-    const slides = track.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.slider__dot');
-    const total = slides.length;
-
-    function goTo(n) {
-      currentSlide = (n + total) % total;
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
-    }
-
-    document.querySelectorAll('.slider__btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const dir = btn.dataset.action === 'next' ? 1 : -1;
-        goTo(currentSlide + dir);
+      lines.forEach((line, i) => {
+        line.style.transitionDelay = `${i * 0.15}s`;
+        io.observe(line);
       });
-    });
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => goTo(Number(dot.dataset.page)));
-    });
+    })();
   </script>
+
 </body>
 </html>
