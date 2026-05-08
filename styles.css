@@ -34,8 +34,8 @@
   --radius-xl: 18px;
 
   /* Typography */
-  --font-display: "Cormorant Garamond", "DM Serif Display", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "GT Walsheim Medium", "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-body: "Inter Variable", "Inter", system-ui, sans-serif;
 
   /* Transitions */
   --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
@@ -58,6 +58,8 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
+  font-feature-settings: "ss07" on, "cv05" on, "ss03" on, "cv11" on, "cv01" on, "cv09" on;
+  font-variation-settings: "opsz" 30, "wght" 450;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -169,12 +171,12 @@ body {
 .hero__title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 82px;
+  font-size: 85px;
   line-height: 0.95;
-  letter-spacing: -0.03em;
-  font-feature-settings: "kern" on;
+  letter-spacing: -0.05em;
+  font-feature-settings: "ss02" on, "tnum" on;
   color: var(--color-text);
-  max-width: 860px;
+  max-width: 900px;
 }
 .hero__title em {
   font-style: italic;
@@ -482,11 +484,11 @@ body {
 .section-header h2 {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -0.03em;
+  font-size: 62px;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
   color: var(--color-text);
-  max-width: 680px;
+  max-width: 700px;
 }
 .section-header h2 em {
   font-style: italic;
@@ -538,10 +540,11 @@ body {
   gap: 8px;
 }
 .feature-card__text h5 {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 18px;
-  letter-spacing: -0.02em;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
   color: var(--color-text);
 }
 .feature-card__text p {
@@ -820,10 +823,11 @@ body {
 }
 .slide__visual img { width: 100%; height: 100%; object-fit: cover; }
 .slide__item h6 {
-  font-family: var(--font-display);
-  font-size: 20px;
+  font-family: var(--font-body);
   font-weight: 500;
-  letter-spacing: -0.02em;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
   color: var(--color-text);
 }
 .slide__item p {
@@ -957,12 +961,12 @@ body {
 }
 .tool-card__visual img { width: 100%; height: 100%; object-fit: cover; }
 .tool-card h6 {
-  font-family: var(--font-display);
-  font-size: 17px;
+  font-family: var(--font-body);
   font-weight: 500;
-  letter-spacing: -0.02em;
+  font-size: 18px;
+  letter-spacing: -0.01em;
   color: var(--color-text);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 .tool-card p {
   font-size: 13px;
@@ -1021,8 +1025,8 @@ body {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 52px;
-  line-height: 1;
-  letter-spacing: -0.03em;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
   color: var(--color-text);
 }
 .cta__text h5 em {
@@ -1159,7 +1163,7 @@ body {
    14. RESPONSIVE
    ============================================ */
 @media (max-width: 1199px) {
-  .hero__title { font-size: 60px; }
+  .hero__title { font-size: 62px; }
   .section-header h2 { font-size: 48px; }
   .features__grid { grid-template-columns: repeat(2, 1fr); }
   .tools__grid { grid-template-columns: repeat(2, 1fr); }
