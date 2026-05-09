@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ressources — Miroia</title>
+  <meta name="description" content="Guides, articles et centre d'aide pour les coachs en image. Tout ce qu'il faut pour démarrer et progresser avec Miroia." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+
+    /* ── Guide de démarrage ───────────────────── */
+    .guide {
+      padding: 0 48px 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .guide__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .guide-step {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 32px 28px 36px;
+      position: relative;
+    }
+    .guide-step:first-child { border-radius: 16px 0 0 16px; }
+    .guide-step:last-child  { border-radius: 0 16px 16px 0; }
+    .guide-step__num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-prism-start, #b266ff);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .guide-step__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .guide-step h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 10px;
+      color: var(--color-text);
+    }
+    .guide-step p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-text-subtle);
+      margin: 0;
+    }
+    .guide-step__arrow {
+      position: absolute;
+      top: 50%;
+      right: -14px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--color-text-subtle);
+      z-index: 1;
+    }
+    .guide-step:last-child .guide-step__arrow { display: none; }
+
+    /* ── Section header partagé ───────────────── */
+    .section-header {
+      margin-bottom: 48px;
+    }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-subtle);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin: 0 0 16px;
+      color: var(--color-text);
+    }
+    .section-title em {
+      font-style: italic;
+      background: var(--gradient-prism);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--color-text-subtle);
+      max-width: 54ch;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── Blog ─────────────────────────────────── */
+    .blog {
+      padding: 0 48px 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .blog__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 0;
+    }
+    .blog-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-border-strong, rgba(255,255,255,0.18));
+    }
+    .blog-card__cover {
+      height: 180px;
+      background: linear-gradient(135deg, var(--color-border) 0%, var(--color-surface) 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .blog-card__cover-icon {
+      font-size: 42px;
+      opacity: 0.5;
+    }
+    .blog-card__cover--a { background: linear-gradient(135deg, #1a0f2e 0%, #2d1854 100%); }
+    .blog-card__cover--b { background: linear-gradient(135deg, #0f1f1a 0%, #1a3328 100%); }
+    .blog-card__cover--c { background: linear-gradient(135deg, #1f100a 0%, #321a0f 100%); }
+    .blog-card__body {
+      padding: 24px 24px 28px;
+    }
+    .blog-card__tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--color-border);
+      color: var(--color-text-subtle);
+      margin-bottom: 14px;
+    }
+    .blog-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.35;
+      margin: 0 0 10px;
+      color: var(--color-text);
+    }
+    .blog-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--color-text-subtle);
+      margin: 0 0 20px;
+    }
+    .blog-card__meta {
+      font-size: 12px;
+      color: var(--color-text-subtle);
+      opacity: 0.6;
+    }
+    .blog-card--featured {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .blog-card--featured .blog-card__cover {
+      height: 100%;
+      min-height: 220px;
+    }
+
+    /* ── FAQ ──────────────────────────────────── */
+    .res-faq {
+      padding: 0 48px 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .res-faq__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 60px;
+      align-items: start;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-item summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--color-text);
+      user-select: none;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--color-text-subtle);
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+    .faq-item__body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--color-text-subtle);
+      padding-bottom: 20px;
+    }
+
+    /* ── Centre d'aide ────────────────────────── */
+    .help {
+      padding: 0 48px 100px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .help__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 0;
+    }
+    .help-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 28px 28px 32px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .help-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-border-strong, rgba(255,255,255,0.18));
+    }
+    .help-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+    .help-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: var(--color-text);
+    }
+    .help-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--color-text-subtle);
+      margin: 0 0 20px;
+    }
+    .help-card__link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+    .help-card__link:hover { opacity: 1; }
+
+    /* ── Responsive ───────────────────────────── */
+    @media (max-width: 900px) {
+      .guide__grid { grid-template-columns: repeat(2, 1fr); }
+      .guide-step:nth-child(2) { border-radius: 0 16px 0 0; }
+      .guide-step:nth-child(3) { border-radius: 0 0 0 16px; }
+      .guide-step:first-child  { border-radius: 16px 0 0 0; }
+      .guide-step:last-child   { border-radius: 0 0 16px 0; }
+      .guide-step__arrow       { display: none; }
+      .blog__grid              { grid-template-columns: 1fr; }
+      .blog-card--featured     { grid-column: span 1; grid-template-columns: 1fr; }
+      .res-faq__grid           { grid-template-columns: 1fr; }
+      .help__grid              { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .guide, .blog, .res-faq, .help { padding-left: 16px; padding-right: 16px; }
+      .guide__grid { grid-template-columns: 1fr; }
+      .guide-step  { border-radius: 16px !important; }
+      .section-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav">
+    <div class="nav__wrapper">
+      <a class="nav__logo" href="index.html" aria-label="Miroia">
+        <span class="nav__logo-mark"></span>
+        Miroia
+      </a>
+      <div class="nav__links">
+        <a href="produit.html">Produit</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="ressources.html" class="active">Ressources</a>
+        <a href="index.html#manifest">Notre vision</a>
+      </div>
+      <a class="nav__cta" href="tarifs.html#cta">Essayer gratuitement</a>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- ============ HERO ============ -->
+    <header class="page-hero">
+      <div class="page-hero__eyebrow">Ressources</div>
+      <h1 class="page-hero__title" data-reveal-words>Tout ce qu'il faut pour <em>bien démarrer</em>.</h1>
+      <p class="page-hero__sub" data-reveal>
+        Guides pas à pas, articles sur le métier et centre d'aide — pour que vous passiez le moins de temps possible sur l'outil et le plus possible avec vos clientes.
+      </p>
+    </header>
+
+    <!-- ============ 1. GUIDE DE DÉMARRAGE ============ -->
+    <section class="guide">
+      <div class="section-header">
+        <span class="section-eyebrow">Guide de démarrage</span>
+        <h2 class="section-title" data-reveal-words>Opérationnelle en <em>moins de 10 minutes</em>.</h2>
+        <p class="section-sub" data-reveal>Quatre étapes pour configurer Miroia et accueillir votre première cliente dès aujourd'hui.</p>
+      </div>
+
+      <div class="guide__grid" data-reveal-children>
+
+        <div class="guide-step">
+          <span class="guide-step__num">Étape 01</span>
+          <div class="guide-step__icon">🪞</div>
+          <h3>Créez votre compte</h3>
+          <p>Renseignez votre nom, votre email et choisissez votre offre. Aucune carte bancaire requise pour l'essai de 14 jours.</p>
+          <span class="guide-step__arrow">→</span>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-step__num">Étape 02</span>
+          <div class="guide-step__icon">👤</div>
+          <h3>Ajoutez votre première cliente</h3>
+          <p>Créez une fiche cliente avec ses informations de base. Colorimétrie, morphologie et objectifs peuvent être complétés au fil des séances.</p>
+          <span class="guide-step__arrow">→</span>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-step__num">Étape 03</span>
+          <div class="guide-step__icon">📅</div>
+          <h3>Planifiez une séance</h3>
+          <p>Créez votre premier rendez-vous, choisissez le type de séance et activez le rappel automatique par email ou SMS.</p>
+          <span class="guide-step__arrow">→</span>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-step__num">Étape 04</span>
+          <div class="guide-step__icon">📄</div>
+          <h3>Envoyez votre premier devis</h3>
+          <p>Personnalisez votre modèle de devis avec votre logo et vos tarifs. Envoi en un clic, signature électronique incluse.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 2. BLOG ============ -->
+    <section class="blog">
+      <div class="section-header">
+        <span class="section-eyebrow">Blog & articles</span>
+        <h2 class="section-title" data-reveal-words>Le métier de coach en image, <em>sans filtre</em>.</h2>
+        <p class="section-sub" data-reveal>Des articles pratiques sur la colorimétrie, la morphologie, et le développement de votre activité.</p>
+      </div>
+
+      <div class="blog__grid" data-reveal-children>
+
+        <!-- Article featured -->
+        <article class="blog-card blog-card--featured">
+          <div class="blog-card__cover blog-card__cover--a">
+            <span class="blog-card__cover-icon">🎨</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Colorimétrie</span>
+            <h3>Les 12 palettes saisonnières expliquées : guide complet pour les coachs en image</h3>
+            <p>Du Printemps clair au Hiver profond — comment identifier chaque type chromatique, quels indices observer lors de l'analyse, et comment communiquer les résultats à vos clientes avec clarté et pédagogie.</p>
+            <span class="blog-card__meta">8 min de lecture · Mai 2025</span>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <div class="blog-card__cover blog-card__cover--b">
+            <span class="blog-card__cover-icon">📐</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Morphologie</span>
+            <h3>Les 6 morphologies : erreurs fréquentes et comment les éviter</h3>
+            <p>Les pièges courants dans l'analyse morphologique et les techniques pour affiner votre diagnostic.</p>
+            <span class="blog-card__meta">5 min de lecture · Avril 2025</span>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <div class="blog-card__cover blog-card__cover--c">
+            <span class="blog-card__cover-icon">💼</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Business</span>
+            <h3>Fixer ses tarifs de coach en image : la méthode par la valeur</h3>
+            <p>Comment sortir de la comparaison avec les concurrentes et construire une grille tarifaire alignée sur votre positionnement.</p>
+            <span class="blog-card__meta">6 min de lecture · Mars 2025</span>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card">
+          <div class="blog-card__cover blog-card__cover--a" style="background: linear-gradient(135deg, #0f1a2e 0%, #182d4a 100%);">
+            <span class="blog-card__cover-icon">📸</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Pratique</span>
+            <h3>Photos avant/après : comment les prendre, les présenter, les utiliser</h3>
+            <p>Cadrage, lumière, cohérence de prise de vue — les bonnes pratiques pour des photos qui valorisent votre travail.</p>
+            <span class="blog-card__meta">4 min de lecture · Février 2025</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ 3. FAQ ============ -->
+    <section class="res-faq">
+      <div class="section-header">
+        <span class="section-eyebrow">Questions fréquentes</span>
+        <h2 class="section-title" data-reveal-words>Les vraies questions, <em>les vraies réponses</em>.</h2>
+      </div>
+
+      <div class="res-faq__grid">
+        <div>
+          <details class="faq-item">
+            <summary>Est-ce que je peux importer mes données existantes ?</summary>
+            <p class="faq-item__body">Oui. Miroia accepte l'import CSV pour les fiches clientes. Si vous utilisez un tableur, Notion ou une autre application, notre équipe peut vous accompagner dans la migration gratuitement pendant l'essai.</p>
+          </details>
+          <details class="faq-item">
+            <summary>L'application mobile est-elle disponible ?</summary>
+            <p class="faq-item__body">L'application mobile (iOS & Android) est disponible sur les offres Pro et Studio. Elle vous permet de consulter les fiches clientes, ajouter des notes et prendre des photos pendant vos séances, même hors connexion.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Miroia est-il conforme au RGPD ?</summary>
+            <p class="faq-item__body">Oui. Les données de vos clientes sont hébergées en Europe (Paris), chiffrées au repos et en transit, et vous pouvez les exporter ou les supprimer à tout moment. Vous restez propriétaire de vos données.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Puis-je annuler à tout moment ?</summary>
+            <p class="faq-item__body">Oui, sans préavis ni pénalité. Si vous annulez avant la fin de votre période, vous conservez l'accès jusqu'à la date de renouvellement. Vos données restent exportables pendant 30 jours après l'annulation.</p>
+          </details>
+        </div>
+
+        <div>
+          <details class="faq-item">
+            <summary>Combien de clientes puis-je gérer ?</summary>
+            <p class="faq-item__body">L'offre Essentiel permet jusqu'à 30 clientes actives. L'offre Pro est illimitée. L'offre Studio inclut en plus des profils multi-collaborateurs pour les cabinets à plusieurs coachs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Les factures sont-elles légalement valides ?</summary>
+            <p class="faq-item__body">Oui. Miroia génère des factures conformes à la législation française (numérotation séquentielle, mentions obligatoires, TVA). Elles sont acceptées par les experts-comptables et les administrations fiscales.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Y a-t-il un engagement de durée ?</summary>
+            <p class="faq-item__body">Non. Toutes nos offres sont sans engagement. Vous pouvez passer d'un plan à l'autre ou résilier à tout moment depuis votre espace client.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Comment fonctionne le support ?</summary>
+            <p class="faq-item__body">Le support est disponible par email pour toutes les offres, avec un délai de réponse de 24h ouvrées. L'offre Studio bénéficie d'un support prioritaire et d'un accès à un onboarding individuel.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. CENTRE D'AIDE ============ -->
+    <section class="help">
+      <div class="section-header">
+        <span class="section-eyebrow">Centre d'aide</span>
+        <h2 class="section-title" data-reveal-words>Besoin d'aide ? <em>On est là.</em></h2>
+        <p class="section-sub" data-reveal>Documentation, tutoriels et contact direct — toutes les portes d'entrée pour trouver une réponse rapidement.</p>
+      </div>
+
+      <div class="help__grid" data-reveal-children>
+
+        <div class="help-card">
+          <div class="help-card__icon">📖</div>
+          <h3>Documentation</h3>
+          <p>Guides détaillés sur chaque fonctionnalité — fiches clientes, agenda, facturation, réglages du compte.</p>
+          <a href="#" class="help-card__link">Lire la documentation →</a>
+        </div>
+
+        <div class="help-card">
+          <div class="help-card__icon">🎬</div>
+          <h3>Tutoriels vidéo</h3>
+          <p>Des courtes vidéos de 2 à 5 minutes pour les actions les plus courantes. Idéal pour apprendre en voyant.</p>
+          <a href="#" class="help-card__link">Voir les tutoriels →</a>
+        </div>
+
+        <div class="help-card">
+          <div class="help-card__icon">✉️</div>
+          <h3>Contacter l'équipe</h3>
+          <p>Une question spécifique ? Écrivez-nous. Réponse sous 24h ouvrées, toujours par une vraie personne.</p>
+          <a href="mailto:hello@miroia.com" class="help-card__link">hello@miroia.com →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" id="cta">
+      <h2 class="cta__title" data-reveal-words>Prête à essayer <em>Miroia</em> ?</h2>
+      <p class="cta__sub" data-reveal>14 jours gratuits. Sans carte bancaire. Sans engagement.</p>
+      <div class="cta__buttons" data-reveal>
+        <a class="btn btn--prism" href="tarifs.html">Commencer gratuitement</a>
+        <a class="btn btn--ghost" href="produit.html">Découvrir le produit</a>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__top">
+        <a href="index.html" class="footer__logo">
+          <span class="nav__logo-mark"></span>
+          Miroia
+        </a>
+        <span class="footer__status">
+          <span class="footer__status-dot"></span>
+          Tous les systèmes opérationnels
+        </span>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Produit</h4>
+          <ul>
+            <li><a href="produit.html">Vue d'ensemble</a></li>
+            <li><a href="produit.html#fiche">Fiche cliente</a></li>
+            <li><a href="produit.html#agenda">Agenda &amp; séances</a></li>
+            <li><a href="produit.html#business">Business</a></li>
+            <li><a href="produit.html#mobile">Application mobile</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Tarifs</h4>
+          <ul>
+            <li><a href="tarifs.html">Offres &amp; prix</a></li>
+            <li><a href="tarifs.html#cta">Essai gratuit</a></li>
+            <li><a href="tarifs.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="ressources.html">Blog</a></li>
+            <li><a href="ressources.html">Guides</a></li>
+            <li><a href="ressources.html">Centre d'aide</a></li>
+            <li><a href="mailto:hello@miroia.com">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="#">CGU</a></li>
+            <li><a href="#">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© Miroia 2025. Tous droits réservés.</p>
+        <p>Conçu pour les coachs en image, partout en France.</p>
+      </div>
+    </footer>
+
+  </div><!-- .page -->
+
+  <script src="animations.js"></script>
+
+</body>
+</html>
