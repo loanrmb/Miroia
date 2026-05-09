@@ -1062,11 +1062,6 @@ body::before {
   align-items: center;
   gap: 9px;
 }
-.footer__logo-mark {
-  width: 24px; height: 24px;
-  border-radius: 7px;
-  background: var(--gradient-prism);
-}
 .footer__status {
   display: flex;
   align-items: center;
