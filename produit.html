@@ -439,16 +439,32 @@
 
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
-      <div class="footer__top">
-        <a href="index.html" class="footer__logo">
-          <span class="footer__logo-mark"></span>
-          Miroia
-        </a>
-        <span class="footer__status">
-          <span class="footer__status-dot"></span>
-          Tous les systèmes opérationnels
-        </span>
-      </div>
+<div class="footer__top">
+  <a href="/" class="footer__logo">
+    <div class="miroia-icon">          <!-- ← remplace le span -->
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="miroia-g-footer" x1="30%" y1="0%" x2="70%" y2="100%">
+            <stop offset="0%" stop-color="#D96EA0"/>
+            <stop offset="55%" stop-color="#E8805A"/>
+            <stop offset="100%" stop-color="#F0A060"/>
+          </linearGradient>
+          <radialGradient id="miroia-gloss-footer" cx="40%" cy="28%" r="38%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="50" cy="50" rx="33" ry="42" fill="url(#miroia-g-footer)"/>
+        <ellipse cx="43" cy="32" rx="14" ry="10" fill="url(#miroia-gloss-footer)"/>
+      </svg>
+    </div>                             <!-- ← fin du remplacement -->
+    Miroia
+  </a>
+  <span class="footer__status">
+    <span class="footer__status-dot"></span>
+    Tous les systèmes opérationnels
+  </span>
+</div>
 
       <div class="footer__cols">
         <div class="footer__col">
