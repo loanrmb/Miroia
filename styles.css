@@ -127,18 +127,43 @@ body::before {
   font-weight: 500;
   letter-spacing: -0.02em;
 }
-.nav__logo-mark {
-  width: 24px; height: 24px;
-  border-radius: 7px;
-  background: var(--gradient-prism);
-  position: relative;
+.miroia-icon {
+  width: 24px;
+  height: 24px;
   overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  animation: miroia-enter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
-.nav__logo-mark::after {
+
+.miroia-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.miroia-icon::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--gradient-shine);
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 70%
+  );
+  animation: miroia-shimmer 0.8s 0.55s ease-out both;
+}
+
+@keyframes miroia-enter {
+  0%   { opacity: 0; transform: scale(0.6) translateY(6px); }
+  100% { opacity: 1; transform: scale(1)   translateY(0);   }
+}
+
+@keyframes miroia-shimmer {
+  0%   { opacity: 0; transform: translateX(-120%) skewX(-15deg); }
+  30%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(200%)  skewX(-15deg); }
 }
 .nav__links {
   display: flex;
