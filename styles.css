@@ -1152,7 +1152,7 @@ body::before {
   .section-head__title { font-size: 40px; }
   .spotlight { padding: 80px 16px 40px; }
   .spotlight__title { font-size: 40px; }
-  .spotlight__panel { grid-template-columns: 1fr; padding: 24px; gap: 20px; }
+  .spotlight__panel { grid-template-columns: 1fr; padding: 0; gap: 16px; }
   .spotlight__grid { grid-template-columns: 1fr; gap: 32px; }
   .cta { padding: 56px 24px; margin: 60px 16px 0; width: calc(100% - 32px); }
   .cta__title { font-size: 36px; }
@@ -2026,18 +2026,22 @@ html {
     justify-content: flex-start;
     overflow: hidden;
   }
-  /* Spotlight fiche cliente — vertical 1-col layout on mobile, no scale JS */
+  /* Spotlight — hide profile sidebar (fc-aside) exactly like CRM nav sidebar */
+  .fc-aside { display: none; }
+  /* Spotlight visual: breathing room + clip for the scale */
   .spotlight__visual {
     overflow: hidden;
-    transform: none; /* remove perspective tilt on mobile */
+    transform: none;
+    padding: 12px;
   }
-  /* Scale targets — JS sets width + transform (agenda + invoice only) */
+  /* Scale targets — JS sets width + transform */
+  .spotlight__panel,
   .pv-agenda,
   .pv-invoice {
     transform-origin: top left;
     flex-shrink: 0;
   }
-  /* Undo the 1-col collapse set at 1099px — we want the 2-col kept for scaling */
+  /* Undo the 1-col collapse set at 1099px — keep 2-col for agenda/invoice scaling */
   .pv-agenda  { grid-template-columns: 280px 1fr; }
   .pv-invoice { grid-template-columns: 1fr 280px; }
   /* Remove forced min-height that creates dead space in the scaled agenda */

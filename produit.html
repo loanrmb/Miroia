@@ -534,11 +534,12 @@
   <script>
   // ============ PRODUCT VISUALS — SCALE TO FIT MOBILE ============
   (() => {
-    // Fiche cliente (spotlight__panel) uses natural 1-col CSS on mobile — no scale needed.
-    // Only agenda and invoice are scaled horizontally.
+    // Fiche cliente: fc-aside hidden via CSS (like CRM nav sidebar),
+    // fc-main (the data) fills and is scaled. Same pattern as CRM hero.
     const TARGETS = [
-      ['.pv-agenda',  520],  // 02 — Agenda   (280px sidebar + 24gap + 216main)
-      ['.pv-invoice', 520],  // 03 — Business  (216main + 24gap + 280side)
+      ['.spotlight__panel', 500],  // 01 — Fiche cliente (fc-aside hidden)
+      ['.pv-agenda',        520],  // 02 — Agenda
+      ['.pv-invoice',       520],  // 03 — Business
     ];
     const PAD = 12; // must match CSS padding on .product-section__visual-inner
 
