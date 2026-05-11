@@ -2229,7 +2229,170 @@ body::before { animation: drift 22s ease-in-out infinite; }
 }
 
 /* ============================================
-   25. REDUCED MOTION
+   25. MOBILE NAV — Hamburger + overlay
+   ============================================ */
+
+/* Hamburger button */
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 200;
+}
+.nav__burger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transform-origin: center;
+  transition:
+    transform 0.35s var(--ease-spring),
+    opacity   0.25s ease,
+    width     0.25s ease;
+}
+.nav__burger.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__burger.is-open span:nth-child(2) { opacity: 0; width: 0; }
+.nav__burger.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Full-screen mobile nav overlay */
+.nav__mobile {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 12, 0.97);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 88px 32px 56px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition:
+    opacity   0.35s var(--ease-glide),
+    transform 0.35s var(--ease-glide);
+}
+.nav__mobile.is-open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+/* Nav links inside overlay */
+.nav__mobile__link {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  color: var(--color-text-muted);
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity   0.4s var(--ease-glide),
+    transform 0.4s var(--ease-glide),
+    color     0.2s ease;
+}
+.nav__mobile.is-open .nav__mobile__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav__mobile.is-open .nav__mobile__link:nth-child(1) { transition-delay: 0.06s; }
+.nav__mobile.is-open .nav__mobile__link:nth-child(2) { transition-delay: 0.12s; }
+.nav__mobile.is-open .nav__mobile__link:nth-child(3) { transition-delay: 0.18s; }
+.nav__mobile.is-open .nav__mobile__link:nth-child(4) { transition-delay: 0.24s; }
+.nav__mobile__link:hover { color: var(--color-text); }
+
+/* CTA inside overlay */
+.nav__mobile__cta {
+  margin-top: 28px;
+  font-size: 16px !important;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity   0.4s var(--ease-glide) 0.3s,
+    transform 0.4s var(--ease-glide) 0.3s;
+}
+.nav__mobile.is-open .nav__mobile__cta { opacity: 1; transform: translateY(0); }
+
+/* Divider line inside overlay */
+.nav__mobile__sep {
+  width: 40px;
+  height: 1px;
+  background: var(--color-border);
+  margin: 12px 0;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.22s;
+}
+.nav__mobile.is-open .nav__mobile__sep { opacity: 1; }
+
+@media (max-width: 740px) {
+  .nav__burger { display: flex; }
+  /* Hide desktop CTA on mobile — it's in the overlay */
+  .nav__cta { display: none; }
+}
+
+/* ============================================
+   26. EXTRA SMALL — 480 px and below
+   ============================================ */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero__title { font-size: 36px; }
+  .hero__sub   { font-size: 15px; }
+
+  /* CRM mockup — hide sidebar to avoid overflow */
+  .crm-mock__sidebar { display: none; }
+  .crm-cards { grid-template-columns: 1fr !important; }
+  .crm-cards .crm-stat:nth-child(3) { grid-column: auto !important; }
+  .crm-mock__main { padding: 16px 14px; gap: 14px; }
+
+  /* Section headers */
+  .section-head__title  { font-size: 34px; }
+  .spotlight__title     { font-size: 34px; }
+  .manifest__title      { font-size: 26px; }
+  .cta__title           { font-size: 30px; }
+  .page-hero__title     { font-size: 36px; }
+
+  /* Spotlight panel — single column, tighter */
+  .spotlight__panel { padding: 18px 16px; gap: 16px; }
+  .fc-tabs  { gap: 14px; flex-wrap: wrap; }
+  .fc-photos { grid-template-columns: repeat(3, 1fr); }
+
+  /* CTA block */
+  .cta { padding: 48px 18px; margin: 48px 12px 0; width: calc(100% - 24px); }
+
+  /* Footer */
+  .footer__cols { grid-template-columns: 1fr !important; gap: 28px; }
+  .footer__bottom { flex-direction: column; gap: 6px; text-align: center; }
+  .footer__status { margin-left: 0; }
+
+  /* Mobile nav links — slightly smaller on narrow phones */
+  .nav__mobile__link { font-size: 28px; }
+
+  /* Pricing */
+  .pricing-card__price .amount { font-size: 44px; }
+
+  /* Product page */
+  .product-section__features { gap: 18px; }
+  .product-section__title { font-size: 30px; }
+}
+
+/* ============================================
+   27. REDUCED MOTION
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

@@ -140,4 +140,44 @@
       });
     });
   }
+  // ---------- 6. Mobile nav toggle ----------
+  const burger    = document.querySelector('.nav__burger');
+  const mobileNav = document.querySelector('.nav__mobile');
+
+  if (burger && mobileNav) {
+    const open  = () => {
+      burger.classList.add('is-open');
+      mobileNav.classList.add('is-open');
+      burger.setAttribute('aria-expanded', 'true');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      burger.classList.remove('is-open');
+      mobileNav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    burger.addEventListener('click', () =>
+      mobileNav.classList.contains('is-open') ? close() : open()
+    );
+
+    // Close on any link tap
+    mobileNav.querySelectorAll('a').forEach(link =>
+      link.addEventListener('click', close)
+    );
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) close();
+    });
+
+    // Close when resizing back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 740) close();
+    });
+  }
+
 })();
