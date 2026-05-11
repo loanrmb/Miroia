@@ -1,574 +1,593 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="favicon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produit — Miroia</title>
-  <meta name="description" content="Tous les outils du coaching d'image, en un seul endroit. Fiches clientes, agenda, facturation, application mobile : la suite complète Miroia." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Produit — Miroia</title>
+<meta name="description" content="Tous les outils du coaching d'image, en un seul endroit. Fiches clientes, agenda, facturation, application mobile : la suite complète Miroia." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- ============ NAVIGATION ============ -->
-  <nav class="nav">
-    <div class="nav__wrapper">
-  <a class="nav__logo" href="/" aria-label="Miroia">
-    <div class="miroia-icon">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="miroia-g" x1="30%" y1="0%" x2="70%" y2="100%">
-            <stop offset="0%" stop-color="#D96EA0"/>
-            <stop offset="55%" stop-color="#E8805A"/>
-            <stop offset="100%" stop-color="#F0A060"/>
-          </linearGradient>
-          <radialGradient id="miroia-gloss" cx="40%" cy="28%" r="38%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
-            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-          </radialGradient>
-        </defs>
-        <ellipse cx="50" cy="50" rx="33" ry="42" fill="url(#miroia-g)"/>
-        <ellipse cx="43" cy="32" rx="14" ry="10" fill="url(#miroia-gloss)"/>
-      </svg>
-    </div>
-
-  Miroia
-  </a>
-      <div class="nav__links">
-        <a href="produit.html">Produit</a>
-        <a href="tarifs.html">Tarifs</a>
-        <a href="ressources.html">Ressources</a>
-        <a href="index.html#manifest">Notre vision</a>
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav">
+  <div class="nav__wrapper">
+    <a class="nav__logo" href="/" aria-label="Miroia">
+      <div class="miroia-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="miroia-g" x1="30%" y1="0%" x2="70%" y2="100%">
+              <stop offset="0%" stop-color="#D96EA0"/>
+              <stop offset="55%" stop-color="#E8805A"/>
+              <stop offset="100%" stop-color="#F0A060"/>
+            </linearGradient>
+            <radialGradient id="miroia-gloss" cx="40%" cy="28%" r="38%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="50" cy="50" rx="33" ry="42" fill="url(#miroia-g)"/>
+          <ellipse cx="43" cy="32" rx="14" ry="10" fill="url(#miroia-gloss)"/>
+        </svg>
       </div>
-      <a class="nav__cta" href="#cta">Essayer gratuitement</a>
-      <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      Miroia
+    </a>
+    <div class="nav__links">
+      <a href="produit.html">Produit</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="ressources.html">Ressources</a>
+      <a href="index.html#manifest">Notre vision</a>
     </div>
-  </nav>
-
-  <!-- Mobile nav overlay -->
-  <div class="nav__mobile" aria-hidden="true">
-    <a class="nav__mobile__link" href="produit.html">Produit</a>
-    <a class="nav__mobile__link" href="tarifs.html">Tarifs</a>
-    <a class="nav__mobile__link" href="ressources.html">Ressources</a>
-    <a class="nav__mobile__link" href="index.html#manifest">Notre vision</a>
-    <div class="nav__mobile__sep"></div>
-    <a class="nav__mobile__cta btn btn--prism" href="#cta">Essayer gratuitement</a>
+    <a class="nav__cta" href="#cta">Essayer gratuitement</a>
+    <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
 
-  <div class="page">
-
-    <!-- ============ PAGE HERO ============ -->
-    <header class="page-hero">
-      <div class="page-hero__eyebrow">Produit</div>
-      <h1 class="page-hero__title" data-reveal-words>Tous les outils du coaching d'image, <em>en un seul endroit</em>.</h1>
-      <p class="page-hero__sub" data-reveal>
-        Quatre piliers conçus pour les gestes quotidiens du métier : la fiche cliente, l'organisation des séances, la gestion business et la mobilité.
-      </p>
-    </header>
-
-    <!-- ============ PRODUCT SECTIONS ============ -->
-    <section class="product">
-
-      <!-- 1. Fiche cliente -->
-      <article class="product-section" id="fiche">
-        <header class="product-section__head">
-          <div>
-            <span class="product-section__eyebrow">01 — Fiche cliente</span>
-            <h2 class="product-section__title" data-reveal-words>Le cœur de chaque accompagnement.</h2>
-          </div>
-          <p class="product-section__sub" data-reveal>
-            Centralisez tout ce que vous savez de chaque cliente. Colorimétrie, morphologie, photos, garde-robe, objectifs — accessibles en deux clics, partout, à tout moment.
-          </p>
-        </header>
-
-        <div class="product-section__visual" data-reveal="scale">
-          <div class="product-section__visual-inner">
-            <div class="spotlight__panel" style="padding:0;background:transparent;min-height:auto;width:100%;">
-              <div class="fc-aside">
-                <div class="fc-photo"></div>
-                <div class="fc-name">Sophie Lenoir</div>
-                <div class="fc-meta">
-                  <span>📍 Bordeaux</span>
-                  <span>📅 Cliente depuis mars 2025</span>
-                  <span>🎯 Coaching complet — 6 séances</span>
-                </div>
-                <div class="fc-tags">
-                  <span class="fc-tag">Été clair</span>
-                  <span class="fc-tag">Morpho V</span>
-                  <span class="fc-tag">Style romantique</span>
-                </div>
-              </div>
-              <div class="fc-main">
-                <div class="fc-tabs">
-                  <span class="fc-tab active">Colorimétrie</span>
-                  <span class="fc-tab">Morphologie</span>
-                  <span class="fc-tab">Garde-robe</span>
-                  <span class="fc-tab">Séances</span>
-                  <span class="fc-tab">Facturation</span>
-                </div>
-                <div class="fc-block">
-                  <div class="fc-block-title">Palette dominante</div>
-                  <div class="fc-palette-grid">
-                    <div class="fc-palette-row">
-                      <span class="fc-palette-label">Tons chauds</span>
-                      <div class="fc-palette-swatch" style="background:#b266ff;"></div>
-                      <div class="fc-palette-swatch" style="background:#9555cc;"></div>
-                      <div class="fc-palette-swatch" style="background:#7733aa;"></div>
-                      <div class="fc-palette-swatch" style="background:#ff9966;"></div>
-                    </div>
-                    <div class="fc-palette-row">
-                      <span class="fc-palette-label">Complémt.</span>
-                      <div class="fc-palette-swatch" style="background:#66ccff;"></div>
-                      <div class="fc-palette-swatch" style="background:#3399cc;"></div>
-                      <div class="fc-palette-swatch" style="background:#ff6699;"></div>
-                      <div class="fc-palette-swatch" style="background:#cc3366;"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="fc-block">
-                  <div class="fc-block-title">Photos récentes</div>
-                  <div class="fc-photos">
-                    <div class="fc-photo-thumb"></div>
-                    <div class="fc-photo-thumb"></div>
-                    <div class="fc-photo-thumb"></div>
-                    <div class="fc-photo-thumb"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-section__features" data-reveal-children>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">◐</div>
-            <h6>Colorimétrie complète</h6>
-            <p>Saisons chromatiques, tons à privilégier ou éviter, palettes complémentaires personnalisables par cliente.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">◇</div>
-            <h6>Morphologie détaillée</h6>
-            <p>Silhouettes types, coupes recommandées, zones à valoriser, mensurations, conseils par catégorie de pièce.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon peach">▢</div>
-            <h6>Photos illimitées</h6>
-            <p>Galerie organisée par séance avec comparateur avant/après. Stockage sécurisé en France, accès cliente possible.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon cyan">⌗</div>
-            <h6>Garde-robe virtuelle</h6>
-            <p>Inventaire des pièces clés, combinaisons sauvegardées, identification des manques pour les prochains shoppings.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">◉</div>
-            <h6>Personnalité de style</h6>
-            <p>Profil de style enrichi : romantique, classique, dramatique, naturel, créatif. Croisement avec colorimétrie.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">⌖</div>
-            <h6>Objectifs de coaching</h6>
-            <p>Définissez les objectifs initiaux et suivez leur progression au fil des séances. Visualisation claire pour la cliente.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2. Agenda & séances -->
-      <article class="product-section" id="agenda">
-        <header class="product-section__head">
-          <div>
-            <span class="product-section__eyebrow">02 — Agenda &amp; séances</span>
-            <h2 class="product-section__title" data-reveal-words>Pilotez vos séances de bout en bout.</h2>
-          </div>
-          <p class="product-section__sub" data-reveal>
-            Planifiez, animez, documentez. Vos notes restent attachées à chaque cliente, vos rappels partent automatiquement, votre journée s'organise toute seule.
-          </p>
-        </header>
-
-        <div class="product-section__visual" data-reveal="scale">
-          <div class="product-section__visual-inner">
-            <div class="pv-agenda">
-              <div class="pv-agenda__sidebar">
-                <div class="pv-agenda__day">Mardi 14 mai</div>
-                <div class="pv-agenda__event pv-agenda__event--violet">
-                  <div class="pv-agenda__event-title">Sophie Lenoir</div>
-                  <div class="pv-agenda__event-time">10h00 · Analyse colorimétrique · 1h30</div>
-                </div>
-                <div class="pv-agenda__event pv-agenda__event--pink">
-                  <div class="pv-agenda__event-title">Camille Mercier</div>
-                  <div class="pv-agenda__event-time">14h00 · Shopping accompagné · 3h</div>
-                </div>
-                <div class="pv-agenda__event pv-agenda__event--peach">
-                  <div class="pv-agenda__event-title">Aurélie Blanc</div>
-                  <div class="pv-agenda__event-time">17h30 · Suivi · 45min</div>
-                </div>
-              </div>
-              <div class="pv-agenda__main">
-                <div class="pv-agenda__main-title">
-                  Sophie Lenoir — Analyse colorimétrique
-                  <span class="pv-agenda__main-pill">Séance 1 / 6</span>
-                </div>
-                <div class="pv-agenda__objective">
-                  <div class="pv-agenda__objective-label">Objectif de la séance</div>
-                  <div style="font-size:14px;color:var(--color-text);">Identifier la saison chromatique, valider 3 tons à privilégier au quotidien.</div>
-                </div>
-                <div class="pv-agenda__objective">
-                  <div class="pv-agenda__objective-label">Notes</div>
-                  <div class="pv-agenda__notes">
-                    Sous-tons clairs, peau peu contrastée. Été clair confirmé. Préférence forte pour les violacés froids — à intégrer dans la palette quotidienne. Évite les ocres et les jaunes saturés.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-section__features" data-reveal-children>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">⌚</div>
-            <h6>Agenda intelligent</h6>
-            <p>Synchronisation Google Calendar et Outlook. Disponibilités partagées avec vos clientes pour la prise de rendez-vous en ligne.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">▤</div>
-            <h6>Templates de séance</h6>
-            <p>Modèles pour analyse colorimétrique, shopping, bilan style, suivi. Personnalisables selon votre méthode.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon peach">≡</div>
-            <h6>Notes structurées</h6>
-            <p>Comptes-rendus avec étiquettes et recherche. Liens vers fiche cliente, photos, palettes — tout est connecté.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon cyan">↗</div>
-            <h6>Suivi d'objectifs</h6>
-            <p>Visualisez la progression des objectifs initiaux séance après séance. Montrez concrètement la valeur de votre coaching.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">⏱</div>
-            <h6>Rappels automatiques</h6>
-            <p>Vos clientes reçoivent un rappel SMS ou email 24h avant. Réduit drastiquement les rendez-vous manqués.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">⊞</div>
-            <h6>Historique complet</h6>
-            <p>Toutes les séances, échanges, paiements et documents archivés. Plus jamais de "où j'avais noté ça ?".</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3. Business -->
-      <article class="product-section" id="business">
-        <header class="product-section__head">
-          <div>
-            <span class="product-section__eyebrow">03 — Business</span>
-            <h2 class="product-section__title" data-reveal-words>Vos finances, sans tableurs.</h2>
-          </div>
-          <p class="product-section__sub" data-reveal>
-            Devis professionnels, factures à votre image, paiements suivis, relances automatiques. Concentrez-vous sur le coaching, Miroia s'occupe du reste.
-          </p>
-        </header>
-
-        <div class="product-section__visual" data-reveal="scale">
-          <div class="product-section__visual-inner">
-            <div class="pv-invoice">
-              <div class="pv-invoice__main">
-                <div class="pv-invoice__head">
-                  <div>
-                    <div class="pv-invoice__num">Facture #042</div>
-                    <div class="pv-invoice__date">Émise le 8 mai 2025 · Échéance 22 mai</div>
-                  </div>
-                  <span class="pv-invoice__pill">Payée</span>
-                </div>
-                <div class="pv-invoice__row">
-                  <span>Analyse colorimétrique — 12 mai</span>
-                  <span>180,00 €</span>
-                </div>
-                <div class="pv-invoice__row">
-                  <span>Shopping accompagné — 19 mai</span>
-                  <span>320,00 €</span>
-                </div>
-                <div class="pv-invoice__row">
-                  <span>Capsule wardrobe — 26 mai</span>
-                  <span>240,00 €</span>
-                </div>
-                <div class="pv-invoice__total">
-                  <span class="pv-invoice__total-label">Total TTC</span>
-                  <span class="pv-invoice__total-amount">740,00 €</span>
-                </div>
-              </div>
-              <div class="pv-invoice__side">
-                <div class="pv-invoice__metric">
-                  <div class="pv-invoice__metric-label">CA mai 2025</div>
-                  <div class="pv-invoice__metric-value">3 840 €</div>
-                </div>
-                <div class="pv-invoice__metric">
-                  <div class="pv-invoice__metric-label">Encours</div>
-                  <div class="pv-invoice__metric-value">560 €</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-section__features" data-reveal-children>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">▥</div>
-            <h6>Devis en 30 secondes</h6>
-            <p>Choisissez votre prestation, ajoutez la cliente, générez. Le devis part par email avec acceptation en ligne.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">▦</div>
-            <h6>Factures à votre image</h6>
-            <p>Logo, couleurs, mentions légales. Vos factures reflètent votre marque, pas un template générique.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon peach">€</div>
-            <h6>Paiements en ligne</h6>
-            <p>Vos clientes règlent par carte ou virement directement depuis la facture. Conciliation automatique.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon cyan">↻</div>
-            <h6>Relances automatiques</h6>
-            <p>J+7, J+14, J+30 — vos relances partent toutes seules avec le ton que vous choisissez. Plus de gêne, plus d'oubli.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">▤</div>
-            <h6>Tableau de bord</h6>
-            <p>CA mensuel, taux de fidélisation, prestations les plus rentables. Pilotez votre activité avec des chiffres clairs.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">⤓</div>
-            <h6>Export comptable</h6>
-            <p>Export CSV ou PDF, compatible avec votre comptable. Clôture mensuelle en 2 minutes.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4. Mobile & communication -->
-      <article class="product-section" id="mobile">
-        <header class="product-section__head">
-          <div>
-            <span class="product-section__eyebrow">04 — Mobile</span>
-            <h2 class="product-section__title" data-reveal-words>Miroia partout où vous êtes.</h2>
-          </div>
-          <p class="product-section__sub" data-reveal>
-            Pendant un shopping, dans le métro, chez une cliente. L'application iOS et Android vous donne accès à tout, en lecture comme en écriture, hors-ligne quand il faut.
-          </p>
-        </header>
-
-        <div class="product-section__visual" data-reveal="scale">
-          <div class="product-section__visual-inner">
-            <div class="pv-mobile">
-              <div class="pv-mobile__notch"></div>
-              <div class="pv-mobile__screen">
-                <div class="pv-mobile__header">
-                  <div class="pv-mobile__title">Aujourd'hui</div>
-                  <div class="pv-mobile__avatar">M</div>
-                </div>
-                <div class="pv-mobile__card">
-                  <div class="pv-mobile__card-label">Prochaine séance</div>
-                  <div class="pv-mobile__card-value">10h00</div>
-                  <div class="pv-mobile__card-sub">Sophie L. · Colorimétrie · 1h30</div>
-                </div>
-                <div class="pv-mobile__row">
-                  <div class="pv-mobile__row-avatar" style="background:linear-gradient(135deg,#ff6699,#cc3366);">CM</div>
-                  <div class="pv-mobile__row-info">
-                    <div class="pv-mobile__row-name">Camille Mercier</div>
-                    <div class="pv-mobile__row-meta">Shopping · 14h00</div>
-                  </div>
-                </div>
-                <div class="pv-mobile__row">
-                  <div class="pv-mobile__row-avatar" style="background:linear-gradient(135deg,#ff9966,#cc6633);">AB</div>
-                  <div class="pv-mobile__row-info">
-                    <div class="pv-mobile__row-name">Aurélie Blanc</div>
-                    <div class="pv-mobile__row-meta">Suivi · 17h30</div>
-                  </div>
-                </div>
-                <div class="pv-mobile__row">
-                  <div class="pv-mobile__row-avatar" style="background:linear-gradient(135deg,#66ccff,#3399cc);">MR</div>
-                  <div class="pv-mobile__row-info">
-                    <div class="pv-mobile__row-name">Marie Rousseau</div>
-                    <div class="pv-mobile__row-meta">À facturer</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-section__features" data-reveal-children>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">▭</div>
-            <h6>iOS &amp; Android</h6>
-            <p>Application native sur les deux plateformes. Synchronisation instantanée avec votre espace web.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">⊟</div>
-            <h6>Mode hors-ligne</h6>
-            <p>Cabines d'essayage sans réseau ? Continuez à consulter et annoter. Tout se synchronise dès que vous revenez en ligne.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon peach">▥</div>
-            <h6>Photos en un geste</h6>
-            <p>Prenez une photo depuis l'app, elle s'attache automatiquement à la fiche cliente et à la séance en cours.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon cyan">↗</div>
-            <h6>Partage cliente instantané</h6>
-            <p>Envoyez un résumé de séance, une recommandation, un bon cadeau directement depuis l'app, en deux taps.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon violet">⌥</div>
-            <h6>Notifications intelligentes</h6>
-            <p>Rappels de séance, factures à éditer, relances à valider. Le bon signal au bon moment, jamais de spam.</p>
-          </div>
-          <div class="product-section__feature">
-            <div class="product-section__feature-icon pink">⏏</div>
-            <h6>Widget &amp; raccourcis</h6>
-            <p>Widget agenda sur votre écran d'accueil. Raccourci Siri pour démarrer une séance d'un seul mot.</p>
-          </div>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- ============ CTA ============ -->
-    <section class="cta" id="cta" style="margin-top:60px;">
-      <div class="cta__inner">
-        <h2 class="cta__title" data-reveal-words>Tout ça, dès le premier jour.</h2>
-        <p class="cta__sub" data-reveal>14 jours pour explorer chaque outil. Sans carte bancaire. Sans engagement.</p>
-        <div class="cta__buttons" data-reveal>
-          <a class="btn btn--prism" data-magnetic="0.3" href="#">Essayer gratuitement</a>
-          <a class="btn btn--ghost" href="tarifs.html">Voir les tarifs</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-    <footer class="footer">
-<div class="footer__top">
-  <a href="/" class="footer__logo">
-    <div class="miroia-icon">          <!-- ← remplace le span -->
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="miroia-g-footer" x1="30%" y1="0%" x2="70%" y2="100%">
-            <stop offset="0%" stop-color="#D96EA0"/>
-            <stop offset="55%" stop-color="#E8805A"/>
-            <stop offset="100%" stop-color="#F0A060"/>
-          </linearGradient>
-          <radialGradient id="miroia-gloss-footer" cx="40%" cy="28%" r="38%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
-            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-          </radialGradient>
-        </defs>
-        <ellipse cx="50" cy="50" rx="33" ry="42" fill="url(#miroia-g-footer)"/>
-        <ellipse cx="43" cy="32" rx="14" ry="10" fill="url(#miroia-gloss-footer)"/>
-      </svg>
-    </div>                             <!-- ← fin du remplacement -->
-    Miroia
-  </a>
-  <span class="footer__status">
-    <span class="footer__status-dot"></span>
-    Tous les systèmes opérationnels
-  </span>
+<!-- Mobile nav overlay -->
+<div class="nav__mobile" aria-hidden="true">
+  <a class="nav__mobile__link" href="produit.html">Produit</a>
+  <a class="nav__mobile__link" href="tarifs.html">Tarifs</a>
+  <a class="nav__mobile__link" href="ressources.html">Ressources</a>
+  <a class="nav__mobile__link" href="index.html#manifest">Notre vision</a>
+  <div class="nav__mobile__sep"></div>
+  <a class="nav__mobile__cta btn btn--prism" href="#cta">Essayer gratuitement</a>
 </div>
 
-      <div class="footer__cols">
-        <div class="footer__col">
-          <h4>Produit</h4>
-          <ul>
-            <li><a href="produit.html">Vue d'ensemble</a></li>
-            <li><a href="#fiche">Fiche cliente</a></li>
-            <li><a href="#agenda">Agenda &amp; séances</a></li>
-            <li><a href="#business">Business</a></li>
-            <li><a href="#mobile">Application mobile</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Tarifs</h4>
-          <ul>
-            <li><a href="tarifs.html">Offres &amp; prix</a></li>
-            <li><a href="#cta">Essai gratuit</a></li>
-            <li><a href="tarifs.html#faq">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Ressources</h4>
-          <ul>
-            <li><a href="ressources.html">Blog</a></li>
-            <li><a href="ressources.html">Guides</a></li>
-            <li><a href="ressources.html">Centre d'aide</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Entreprise</h4>
-          <ul>
-            <li><a href="index.html#manifest">Notre vision</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Confidentialité</a></li>
-            <li><a href="#">CGU</a></li>
-          </ul>
+<div class="page">
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="page-hero__eyebrow">Produit</div>
+  <h1 class="page-hero__title" data-reveal-words>Tous les outils du coaching d'image, <em>en un seul endroit</em>.</h1>
+  <p class="page-hero__sub" data-reveal>
+    Quatre piliers conçus pour les gestes quotidiens du métier : la fiche cliente, l'organisation des séances, la gestion business et la mobilité.
+  </p>
+</header>
+
+<!-- ============ PRODUCT SECTIONS ============ -->
+<section class="product">
+
+  <!-- 1. Fiche cliente -->
+  <article class="product-section" id="fiche">
+    <header class="product-section__head">
+      <div>
+        <span class="product-section__eyebrow">01 — Fiche cliente</span>
+        <h2 class="product-section__title" data-reveal-words>Le cœur de chaque accompagnement.</h2>
+      </div>
+      <p class="product-section__sub" data-reveal>
+        Centralisez tout ce que vous savez de chaque cliente. Colorimétrie, morphologie, photos, garde-robe, objectifs — accessibles en deux clics, partout, à tout moment.
+      </p>
+    </header>
+    <div class="product-section__visual" data-reveal="scale">
+      <div class="product-section__visual-inner">
+        <div class="spotlight__panel" style="padding:0;background:transparent;min-height:auto;width:100%;">
+          <div class="fc-aside">
+            <div class="fc-photo"></div>
+            <div class="fc-name">Sophie Lenoir</div>
+            <div class="fc-meta">
+              <span>📍 Bordeaux</span>
+              <span>📅 Cliente depuis mars 2025</span>
+              <span>🎯 Coaching complet — 6 séances</span>
+            </div>
+            <div class="fc-tags">
+              <span class="fc-tag">Été clair</span>
+              <span class="fc-tag">Morpho V</span>
+              <span class="fc-tag">Style romantique</span>
+            </div>
+          </div>
+          <div class="fc-main">
+            <div class="fc-tabs">
+              <span class="fc-tab active">Colorimétrie</span>
+              <span class="fc-tab">Morphologie</span>
+              <span class="fc-tab">Garde-robe</span>
+              <span class="fc-tab">Séances</span>
+              <span class="fc-tab">Facturation</span>
+            </div>
+            <div class="fc-block">
+              <div class="fc-block-title">Palette dominante</div>
+              <div class="fc-palette-grid">
+                <div class="fc-palette-row">
+                  <span class="fc-palette-label">Tons chauds</span>
+                  <div class="fc-palette-swatch" style="background:#b266ff;"></div>
+                  <div class="fc-palette-swatch" style="background:#9555cc;"></div>
+                  <div class="fc-palette-swatch" style="background:#7733aa;"></div>
+                  <div class="fc-palette-swatch" style="background:#ff9966;"></div>
+                </div>
+                <div class="fc-palette-row">
+                  <span class="fc-palette-label">Complémt.</span>
+                  <div class="fc-palette-swatch" style="background:#66ccff;"></div>
+                  <div class="fc-palette-swatch" style="background:#3399cc;"></div>
+                  <div class="fc-palette-swatch" style="background:#ff6699;"></div>
+                  <div class="fc-palette-swatch" style="background:#cc3366;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="fc-block">
+              <div class="fc-block-title">Photos récentes</div>
+              <div class="fc-photos">
+                <div class="fc-photo-thumb"></div>
+                <div class="fc-photo-thumb"></div>
+                <div class="fc-photo-thumb"></div>
+                <div class="fc-photo-thumb"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="footer__bottom">
-        <p>© Miroia 2025</p>
-        <p>Conçu pour les coachs en image, partout en France.</p>
+    </div>
+    <div class="product-section__features" data-reveal-children>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">◐</div>
+        <h6>Colorimétrie complète</h6>
+        <p>Saisons chromatiques, tons à privilégier ou éviter, palettes complémentaires personnalisables par cliente.</p>
       </div>
-    </footer>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">◇</div>
+        <h6>Morphologie détaillée</h6>
+        <p>Silhouettes types, coupes recommandées, zones à valoriser, mensurations, conseils par catégorie de pièce.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon peach">▢</div>
+        <h6>Photos illimitées</h6>
+        <p>Galerie organisée par séance avec comparateur avant/après. Stockage sécurisé en France, accès cliente possible.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon cyan">⌗</div>
+        <h6>Garde-robe virtuelle</h6>
+        <p>Inventaire des pièces clés, combinaisons sauvegardées, identification des manques pour les prochains shoppings.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">◉</div>
+        <h6>Personnalité de style</h6>
+        <p>Profil de style enrichi : romantique, classique, dramatique, naturel, créatif. Croisement avec colorimétrie.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">⌖</div>
+        <h6>Objectifs de coaching</h6>
+        <p>Définissez les objectifs initiaux et suivez leur progression au fil des séances. Visualisation claire pour la cliente.</p>
+      </div>
+    </div>
+  </article>
 
-  </div><!-- .page -->
+  <!-- 2. Agenda & séances -->
+  <article class="product-section" id="agenda">
+    <header class="product-section__head">
+      <div>
+        <span class="product-section__eyebrow">02 — Agenda &amp; séances</span>
+        <h2 class="product-section__title" data-reveal-words>Pilotez vos séances de bout en bout.</h2>
+      </div>
+      <p class="product-section__sub" data-reveal>
+        Planifiez, animez, documentez. Vos notes restent attachées à chaque cliente, vos rappels partent automatiquement, votre journée s'organise toute seule.
+      </p>
+    </header>
+    <div class="product-section__visual" data-reveal="scale">
+      <div class="product-section__visual-inner">
+        <div class="pv-agenda">
+          <div class="pv-agenda__sidebar">
+            <div class="pv-agenda__day">Mardi 14 mai</div>
+            <div class="pv-agenda__event pv-agenda__event--violet">
+              <div class="pv-agenda__event-title">Sophie Lenoir</div>
+              <div class="pv-agenda__event-time">10h00 · Analyse colorimétrique · 1h30</div>
+            </div>
+            <div class="pv-agenda__event pv-agenda__event--pink">
+              <div class="pv-agenda__event-title">Camille Mercier</div>
+              <div class="pv-agenda__event-time">14h00 · Shopping accompagné · 3h</div>
+            </div>
+            <div class="pv-agenda__event pv-agenda__event--peach">
+              <div class="pv-agenda__event-title">Aurélie Blanc</div>
+              <div class="pv-agenda__event-time">17h30 · Suivi · 45min</div>
+            </div>
+          </div>
+          <div class="pv-agenda__main">
+            <div class="pv-agenda__main-title">
+              Sophie Lenoir — Analyse colorimétrique
+              <span class="pv-agenda__main-pill">Séance 1 / 6</span>
+            </div>
+            <div class="pv-agenda__objective">
+              <div class="pv-agenda__objective-label">Objectif de la séance</div>
+              <div style="font-size:14px;color:var(--color-text);">Identifier la saison chromatique, valider 3 tons à privilégier au quotidien.</div>
+            </div>
+            <div class="pv-agenda__objective">
+              <div class="pv-agenda__objective-label">Notes</div>
+              <div class="pv-agenda__notes">
+                Sous-tons clairs, peau peu contrastée. Été clair confirmé. Préférence forte pour les violacés froids — à intégrer dans la palette quotidienne. Évite les ocres et les jaunes saturés.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-section__features" data-reveal-children>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">⌚</div>
+        <h6>Agenda intelligent</h6>
+        <p>Synchronisation Google Calendar et Outlook. Disponibilités partagées avec vos clientes pour la prise de rendez-vous en ligne.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">▤</div>
+        <h6>Templates de séance</h6>
+        <p>Modèles pour analyse colorimétrique, shopping, bilan style, suivi. Personnalisables selon votre méthode.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon peach">≡</div>
+        <h6>Notes structurées</h6>
+        <p>Comptes-rendus avec étiquettes et recherche. Liens vers fiche cliente, photos, palettes — tout est connecté.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon cyan">↗</div>
+        <h6>Suivi d'objectifs</h6>
+        <p>Visualisez la progression des objectifs initiaux séance après séance. Montrez concrètement la valeur de votre coaching.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">⏱</div>
+        <h6>Rappels automatiques</h6>
+        <p>Vos clientes reçoivent un rappel SMS ou email 24h avant. Réduit drastiquement les rendez-vous manqués.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">⊞</div>
+        <h6>Historique complet</h6>
+        <p>Toutes les séances, échanges, paiements et documents archivés. Plus jamais de "où j'avais noté ça ?".</p>
+      </div>
+    </div>
+  </article>
 
+  <!-- 3. Business -->
+  <article class="product-section" id="business">
+    <header class="product-section__head">
+      <div>
+        <span class="product-section__eyebrow">03 — Business</span>
+        <h2 class="product-section__title" data-reveal-words>Vos finances, sans tableurs.</h2>
+      </div>
+      <p class="product-section__sub" data-reveal>
+        Devis professionnels, factures à votre image, paiements suivis, relances automatiques. Concentrez-vous sur le coaching, Miroia s'occupe du reste.
+      </p>
+    </header>
+    <div class="product-section__visual" data-reveal="scale">
+      <div class="product-section__visual-inner">
+        <div class="pv-invoice">
+          <div class="pv-invoice__main">
+            <div class="pv-invoice__head">
+              <div>
+                <div class="pv-invoice__num">Facture #042</div>
+                <div class="pv-invoice__date">Émise le 8 mai 2025 · Échéance 22 mai</div>
+              </div>
+              <span class="pv-invoice__pill">Payée</span>
+            </div>
+            <div class="pv-invoice__row">
+              <span>Analyse colorimétrique — 12 mai</span>
+              <span>180,00 €</span>
+            </div>
+            <div class="pv-invoice__row">
+              <span>Shopping accompagné — 19 mai</span>
+              <span>320,00 €</span>
+            </div>
+            <div class="pv-invoice__row">
+              <span>Capsule wardrobe — 26 mai</span>
+              <span>240,00 €</span>
+            </div>
+            <div class="pv-invoice__total">
+              <span class="pv-invoice__total-label">Total TTC</span>
+              <span class="pv-invoice__total-amount">740,00 €</span>
+            </div>
+          </div>
+          <div class="pv-invoice__side">
+            <div class="pv-invoice__metric">
+              <div class="pv-invoice__metric-label">CA mai 2025</div>
+              <div class="pv-invoice__metric-value">3 840 €</div>
+            </div>
+            <div class="pv-invoice__metric">
+              <div class="pv-invoice__metric-label">Encours</div>
+              <div class="pv-invoice__metric-value">560 €</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-section__features" data-reveal-children>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">▥</div>
+        <h6>Devis en 30 secondes</h6>
+        <p>Choisissez votre prestation, ajoutez la cliente, générez. Le devis part par email avec acceptation en ligne.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">▦</div>
+        <h6>Factures à votre image</h6>
+        <p>Logo, couleurs, mentions légales. Vos factures reflètent votre marque, pas un template générique.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon peach">€</div>
+        <h6>Paiements en ligne</h6>
+        <p>Vos clientes règlent par carte ou virement directement depuis la facture. Conciliation automatique.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon cyan">↻</div>
+        <h6>Relances automatiques</h6>
+        <p>J+7, J+14, J+30 — vos relances partent toutes seules avec le ton que vous choisissez. Plus de gêne, plus d'oubli.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">▤</div>
+        <h6>Tableau de bord</h6>
+        <p>CA mensuel, taux de fidélisation, prestations les plus rentables. Pilotez votre activité avec des chiffres clairs.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">⤓</div>
+        <h6>Export comptable</h6>
+        <p>Export CSV ou PDF, compatible avec votre comptable. Clôture mensuelle en 2 minutes.</p>
+      </div>
+    </div>
+  </article>
 
-  <script src="animations.js"></script>
+  <!-- 4. Mobile & communication -->
+  <article class="product-section" id="mobile">
+    <header class="product-section__head">
+      <div>
+        <span class="product-section__eyebrow">04 — Mobile</span>
+        <h2 class="product-section__title" data-reveal-words>Miroia partout où vous êtes.</h2>
+      </div>
+      <p class="product-section__sub" data-reveal>
+        Pendant un shopping, dans le métro, chez une cliente. L'application iOS et Android vous donne accès à tout, en lecture comme en écriture, hors-ligne quand il faut.
+      </p>
+    </header>
+    <div class="product-section__visual" data-reveal="scale">
+      <div class="product-section__visual-inner">
+        <div class="pv-mobile">
+          <div class="pv-mobile__notch"></div>
+          <div class="pv-mobile__screen">
+            <div class="pv-mobile__header">
+              <div class="pv-mobile__title">Aujourd'hui</div>
+              <div class="pv-mobile__avatar">M</div>
+            </div>
+            <div class="pv-mobile__card">
+              <div class="pv-mobile__card-label">Prochaine séance</div>
+              <div class="pv-mobile__card-value">10h00</div>
+              <div class="pv-mobile__card-sub">Sophie L. · Colorimétrie · 1h30</div>
+            </div>
+            <div class="pv-mobile__row">
+              <div class="pv-mobile__row-avatar" style="background:linear-gradient(135deg,#ff6699,#cc3366);">CM</div>
+              <div class="pv-mobile__row-info">
+                <div class="pv-mobile__row-name">Camille Mercier</div>
+                <div class="pv-mobile__row-meta">Shopping · 14h00</div>
+              </div>
+            </div>
+            <div class="pv-mobile__row">
+              <div class="pv-mobile__row-avatar" style="background:linear-gradient(135deg,#ff9966,#cc6633);">AB</div>
+              <div class="pv-mobile__row-info">
+                <div class="pv-mobile__row-name">Aurélie Blanc</div>
+                <div class="pv-mobile__row-meta">Suivi · 17h30</div>
+              </div>
+            </div>
+            <div class="pv-mobile__row">
+              <div class="pv-mobile__row-avatar" style="background:linear-gradient(135deg,#66ccff,#3399cc);">MR</div>
+              <div class="pv-mobile__row-info">
+                <div class="pv-mobile__row-name">Marie Rousseau</div>
+                <div class="pv-mobile__row-meta">À facturer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-section__features" data-reveal-children>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">▭</div>
+        <h6>iOS &amp; Android</h6>
+        <p>Application native sur les deux plateformes. Synchronisation instantanée avec votre espace web.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">⊟</div>
+        <h6>Mode hors-ligne</h6>
+        <p>Cabines d'essayage sans réseau ? Continuez à consulter et annoter. Tout se synchronise dès que vous revenez en ligne.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon peach">▥</div>
+        <h6>Photos en un geste</h6>
+        <p>Prenez une photo depuis l'app, elle s'attache automatiquement à la fiche cliente et à la séance en cours.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon cyan">↗</div>
+        <h6>Partage cliente instantané</h6>
+        <p>Envoyez un résumé de séance, une recommandation, un bon cadeau directement depuis l'app, en deux taps.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon violet">⌥</div>
+        <h6>Notifications intelligentes</h6>
+        <p>Rappels de séance, factures à éditer, relances à valider. Le bon signal au bon moment, jamais de spam.</p>
+      </div>
+      <div class="product-section__feature">
+        <div class="product-section__feature-icon pink">⏏</div>
+        <h6>Widget &amp; raccourcis</h6>
+        <p>Widget agenda sur votre écran d'accueil. Raccourci Siri pour démarrer une séance d'un seul mot.</p>
+      </div>
+    </div>
+  </article>
 
-  <script>
-  // ============ PRODUCT VISUALS — SCALE TO FIT MOBILE ============
-  (() => {
-    // Fiche cliente: fc-aside hidden via CSS (like CRM nav sidebar),
-    // fc-main (the data) fills and is scaled. Same pattern as CRM hero.
-    const TARGETS = [
-      ['.spotlight__panel', 500],  // 01 — Fiche cliente (fc-aside hidden)
-      ['.pv-agenda',        520],  // 02 — Agenda
-      ['.pv-invoice',       520],  // 03 — Business
-    ];
-    const PAD = 12; // must match CSS padding on .product-section__visual-inner
+</section>
 
-    TARGETS.forEach(([sel, naturalW]) => {
-      const el = document.querySelector(sel);
-      if (!el) return;
-      const container = el.closest('.product-section__visual-inner');
-      if (!container) return;
+<!-- ============ CTA ============ -->
+<section class="cta" id="cta" style="margin-top:60px;">
+  <div class="cta__inner">
+    <h2 class="cta__title" data-reveal-words>Tout ça, dès le premier jour.</h2>
+    <p class="cta__sub" data-reveal>14 jours pour explorer chaque outil. Sans carte bancaire. Sans engagement.</p>
+    <div class="cta__buttons" data-reveal>
+      <a class="btn btn--prism" data-magnetic="0.3" href="#">Essayer gratuitement</a>
+      <a class="btn btn--ghost" href="tarifs.html">Voir les tarifs</a>
+    </div>
+  </div>
+</section>
 
-      function apply() {
-        if (window.innerWidth > 740) {
-          el.style.width = ''; el.style.transform = '';
-          container.style.height = '';
-          return;
-        }
-        el.style.transform = 'none';
-        el.style.width = naturalW + 'px';
-        const h = el.offsetHeight;
-        // Scale to fit content area (container minus padding on both sides)
-        const s = (container.offsetWidth - PAD * 2) / naturalW;
-        el.style.transformOrigin = 'top left';
-        el.style.transform = `scale(${s})`;
-        // Container height = scaled content + top & bottom padding
-        container.style.height = Math.round(h * s + PAD * 2) + 'px';
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__top">
+    <a href="/" class="footer__logo">
+      <div class="miroia-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="miroia-g-footer" x1="30%" y1="0%" x2="70%" y2="100%">
+              <stop offset="0%" stop-color="#D96EA0"/>
+              <stop offset="55%" stop-color="#E8805A"/>
+              <stop offset="100%" stop-color="#F0A060"/>
+            </linearGradient>
+            <radialGradient id="miroia-gloss-footer" cx="40%" cy="28%" r="38%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="50" cy="50" rx="33" ry="42" fill="url(#miroia-g-footer)"/>
+          <ellipse cx="43" cy="32" rx="14" ry="10" fill="url(#miroia-gloss-footer)"/>
+        </svg>
+      </div>
+      Miroia
+    </a>
+    <span class="footer__status">
+      <span class="footer__status-dot"></span>
+      Tous les systèmes opérationnels
+    </span>
+  </div>
+  <div class="footer__cols">
+    <div class="footer__col">
+      <h4>Produit</h4>
+      <ul>
+        <li><a href="produit.html">Vue d'ensemble</a></li>
+        <li><a href="#fiche">Fiche cliente</a></li>
+        <li><a href="#agenda">Agenda &amp; séances</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#mobile">Application mobile</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Tarifs</h4>
+      <ul>
+        <li><a href="tarifs.html">Offres &amp; prix</a></li>
+        <li><a href="#cta">Essai gratuit</a></li>
+        <li><a href="tarifs.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="ressources.html">Blog</a></li>
+        <li><a href="ressources.html">Guides</a></li>
+        <li><a href="ressources.html">Centre d'aide</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Entreprise</h4>
+      <ul>
+        <li><a href="index.html#manifest">Notre vision</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">CGU</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© Miroia 2025</p>
+    <p>Conçu pour les coachs en image, partout en France.</p>
+  </div>
+</footer>
+
+</div><!-- .page -->
+
+<script src="animations.js"></script>
+<script>
+// ============ PRODUCT VISUALS — SCALE TO FIT MOBILE ============
+(() => {
+  // FIX 1 — Empêche le wrapping du texte dans les éléments scalés
+  // Ces éléments doivent rester sur une seule ligne AVANT que le scale soit appliqué,
+  // sinon le navigateur calcule une hauteur sur 2 lignes et le conteneur devient trop grand.
+  [
+    '.pv-agenda__main-title',   // "Sophie Lenoir — Analyse colorimétrique  [Séance 1/6]"
+    '.pv-invoice__total',       // "Total TTC  740,00 €"
+    '.pv-invoice__head',        // "Facture #042  [Payée]"
+  ].forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => {
+      el.style.whiteSpace = 'nowrap';
+    });
+  });
+
+  // FIX 2 — Largeurs naturelles corrigées
+  // .spotlight__panel : 720 px pour inclure fc-aside + fc-main côte à côte (était 500 avec fc-aside masqué)
+  // .pv-agenda        : 660 px pour éviter le wrap du titre long (était 520)
+  // .pv-invoice       : 560 px légèrement plus large pour éviter le wrap du total (était 520)
+  const TARGETS = [
+    ['.spotlight__panel', 720], // 01 — Fiche cliente (fc-aside + fc-main)
+    ['.pv-agenda',        660], // 02 — Agenda
+    ['.pv-invoice',       560], // 03 — Business
+  ];
+
+  const PAD = 12; // doit correspondre au padding CSS de .product-section__visual-inner
+
+  TARGETS.forEach(([sel, naturalW]) => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+
+    const container = el.closest('.product-section__visual-inner');
+    if (!container) return;
+
+    function apply() {
+      if (window.innerWidth > 740) {
+        // Desktop : on remet tout à zéro (le CSS reprend la main)
+        el.style.width = '';
+        el.style.transform = '';
+        container.style.height = '';
+        // FIX 3 — Restitue le contrôle CSS du fc-aside au desktop
+        const aside = el.querySelector('.fc-aside');
+        if (aside) aside.style.display = '';
+        return;
       }
 
-      apply();
-      window.addEventListener('resize', apply, { passive: true });
-    });
-  })();
-  </script>
+      // FIX 3 — Force fc-aside visible sur mobile (le CSS le masquait via media query)
+      // On l'affiche en flex pour reproduire le layout PC complet avant de scaler.
+      const aside = el.querySelector('.fc-aside');
+      if (aside) aside.style.display = 'flex';
+
+      // Applique la largeur naturelle puis mesure la hauteur réelle
+      el.style.transform = 'none';
+      el.style.width = naturalW + 'px';
+      const h = el.offsetHeight;
+
+      // Calcule le ratio de réduction pour tenir dans le conteneur
+      const s = (container.offsetWidth - PAD * 2) / naturalW;
+      el.style.transformOrigin = 'top left';
+      el.style.transform = `scale(${s})`;
+
+      // Ajuste la hauteur du conteneur au contenu réduit + padding haut/bas
+      container.style.height = Math.round(h * s + PAD * 2) + 'px';
+    }
+
+    apply();
+    window.addEventListener('resize', apply, { passive: true });
+  });
+})();
+</script>
+
+</body>
 </html>
