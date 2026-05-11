@@ -2018,9 +2018,10 @@ html {
   .faq-item summary { font-size: 15px; padding: 18px 4px; }
 
   /* ── Product visual scale (JS injects transform) ── */
-  /* Remove padding/centering so transform-origin: top left works cleanly */
+  /* 12px padding gives breathing room between outer border and inner content.
+     JS uses (containerWidth - 24) as the available width for the scale. */
   .product-section__visual-inner {
-    padding: 0;
+    padding: 12px;
     min-height: 0;
     align-items: flex-start;
     justify-content: flex-start;
@@ -2030,6 +2031,7 @@ html {
   .spotlight__visual {
     overflow: hidden;
     transform: none; /* remove perspective tilt on mobile */
+    padding: 12px;   /* same breathing room */
   }
   /* Scale targets — JS sets width + transform */
   .spotlight__panel,
