@@ -1162,15 +1162,19 @@ body::before {
   .manifest__title { font-size: 32px; }
   .footer { padding: 60px 16px 32px; }
   .footer__cols { grid-template-columns: 1fr 1fr; gap: 24px; }
-  /* CRM scale — JS injects transform + fixed width, CSS just locks the origin */
+  /* CRM scale — sidebar hidden so only main content is measured + scaled */
+  .crm-mock__sidebar { display: none; }
   .crm-mock {
+    min-height: 0;          /* let actual content drive the height */
     transform-origin: top left;
     flex-shrink: 0;
   }
   .hero__visual {
     overflow: hidden;
-    /* height is set by JS to match scaled content */
+    /* height injected by JS */
   }
+  /* Fiche cliente tabs — wrap instead of overflow */
+  .fc-tabs { flex-wrap: wrap; gap: 8px 14px; padding-bottom: 10px; }
 }
 
 

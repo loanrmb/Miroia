@@ -552,7 +552,7 @@
       const visual = document.querySelector('.hero__visual');
       if (!mock || !visual) return;
 
-      const NATURAL_W = 820; // px — sidebar(200) + main + gap
+      const NATURAL_W = 600; // main content only — sidebar is hidden via CSS
 
       function scaleCRM() {
         if (window.innerWidth > 740) {
@@ -576,6 +576,8 @@
       scaleCRM();
       window.addEventListener('resize', scaleCRM, { passive: true });
     })();
+
+  </script>
 
   <script>
 
