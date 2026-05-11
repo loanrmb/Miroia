@@ -534,13 +534,13 @@
   <script>
   // ============ PRODUCT VISUALS — SCALE TO FIT MOBILE ============
   (() => {
-    // [el selector inside visual-inner, natural width]
+    // Fiche cliente (spotlight__panel) uses natural 1-col CSS on mobile — no scale needed.
+    // Only agenda and invoice are scaled horizontally.
     const TARGETS = [
-      ['.spotlight__panel', 700],  // 01 — Fiche cliente
-      ['.pv-agenda',        660],  // 02 — Agenda
-      ['.pv-invoice',       660],  // 03 — Business / Factures
-      // 04 — Mobile (pv-mobile) is already a phone mockup, skip
+      ['.pv-agenda',  520],  // 02 — Agenda   (280px sidebar + 24gap + 216main)
+      ['.pv-invoice', 520],  // 03 — Business  (216main + 24gap + 280side)
     ];
+    const PAD = 12; // must match CSS padding on .product-section__visual-inner
 
     TARGETS.forEach(([sel, naturalW]) => {
       const el = document.querySelector(sel);
@@ -557,10 +557,12 @@
         el.style.transform = 'none';
         el.style.width = naturalW + 'px';
         const h = el.offsetHeight;
-        const s = container.offsetWidth / naturalW;
+        // Scale to fit content area (container minus padding on both sides)
+        const s = (container.offsetWidth - PAD * 2) / naturalW;
         el.style.transformOrigin = 'top left';
         el.style.transform = `scale(${s})`;
-        container.style.height = Math.round(h * s) + 'px';
+        // Container height = scaled content + top & bottom padding
+        container.style.height = Math.round(h * s + PAD * 2) + 'px';
       }
 
       apply();

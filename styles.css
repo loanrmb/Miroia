@@ -1661,10 +1661,9 @@ html {
 .product-section__visual-inner {
   background: var(--color-bg-deep);
   padding: 32px 40px;
-  min-height: 400px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;     /* no vertical centering — content determines height */
+  justify-content: flex-start;
   position: relative;
 }
 .product-section__features {
@@ -2027,14 +2026,12 @@ html {
     justify-content: flex-start;
     overflow: hidden;
   }
-  /* Spotlight fiche cliente on index.html */
+  /* Spotlight fiche cliente — vertical 1-col layout on mobile, no scale JS */
   .spotlight__visual {
     overflow: hidden;
     transform: none; /* remove perspective tilt on mobile */
-    padding: 12px;   /* same breathing room */
   }
-  /* Scale targets — JS sets width + transform */
-  .spotlight__panel,
+  /* Scale targets — JS sets width + transform (agenda + invoice only) */
   .pv-agenda,
   .pv-invoice {
     transform-origin: top left;
@@ -2043,6 +2040,8 @@ html {
   /* Undo the 1-col collapse set at 1099px — we want the 2-col kept for scaling */
   .pv-agenda  { grid-template-columns: 280px 1fr; }
   .pv-invoice { grid-template-columns: 1fr 280px; }
+  /* Remove forced min-height that creates dead space in the scaled agenda */
+  .pv-agenda__main { min-height: 0; }
 
   /* ── Compare table — horizontal scroll + sticky feature column ── */
   .compare { padding: 0 16px; margin-top: 60px; overflow: hidden; }
