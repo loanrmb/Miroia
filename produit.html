@@ -531,5 +531,41 @@
 
   <script src="animations.js"></script>
 
-</body>
+  <script>
+  // ============ PRODUCT VISUALS — SCALE TO FIT MOBILE ============
+  (() => {
+    // [el selector inside visual-inner, natural width]
+    const TARGETS = [
+      ['.spotlight__panel', 700],  // 01 — Fiche cliente
+      ['.pv-agenda',        660],  // 02 — Agenda
+      ['.pv-invoice',       660],  // 03 — Business / Factures
+      // 04 — Mobile (pv-mobile) is already a phone mockup, skip
+    ];
+
+    TARGETS.forEach(([sel, naturalW]) => {
+      const el = document.querySelector(sel);
+      if (!el) return;
+      const container = el.closest('.product-section__visual-inner');
+      if (!container) return;
+
+      function apply() {
+        if (window.innerWidth > 740) {
+          el.style.width = ''; el.style.transform = '';
+          container.style.height = '';
+          return;
+        }
+        el.style.transform = 'none';
+        el.style.width = naturalW + 'px';
+        const h = el.offsetHeight;
+        const s = container.offsetWidth / naturalW;
+        el.style.transformOrigin = 'top left';
+        el.style.transform = `scale(${s})`;
+        container.style.height = Math.round(h * s) + 'px';
+      }
+
+      apply();
+      window.addEventListener('resize', apply, { passive: true });
+    });
+  })();
+  </script>
 </html>

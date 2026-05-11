@@ -2002,29 +2002,92 @@ html {
 }
 
 @media (max-width: 740px) {
+  /* ── Pages intérieures ──────────────────────── */
   .page-hero { padding: 110px 16px 60px; }
   .page-hero__title { font-size: 44px; }
   .page-hero__sub { font-size: 16px; }
   .pricing { padding: 0 16px 60px; }
   .pricing-toggle { margin-bottom: 36px; }
   .pricing-card { padding: 26px 22px; }
-  .compare-table { font-size: 12px; }
-  .compare-table th, .compare-table td { padding: 10px 12px; }
-  .compare { padding: 0 16px; margin-top: 60px; }
   .product { padding: 0 16px; }
   .product-section { padding: 60px 0; }
   .product-section__title { font-size: 36px; }
-  .product-section__visual-inner { padding: 20px; min-height: 320px; }
   .product-section__features { grid-template-columns: 1fr; gap: 24px; }
-  .pv-mobile { width: 100%; max-width: 320px; }
+  .pv-mobile { width: 100%; max-width: 300px; }
   .faq { padding: 0 16px; margin-top: 60px; }
   .faq-item summary { font-size: 15px; padding: 18px 4px; }
-  .compare-table thead { display: none; }
-  .compare-table, .compare-table tbody, .compare-table tr, .compare-table td, .compare-table th { display: block; }
-  .compare-table tr { padding: 12px 0; border-bottom: 1px solid var(--color-border); }
-  .compare-table tbody th { padding: 8px 12px 4px; }
-  .compare-table td { padding: 4px 12px; text-align: left; }
-  .compare-table td::before { content: attr(data-label) ' : '; color: var(--color-text-subtle); font-size: 12px; }
+
+  /* ── Product visual scale (JS injects transform) ── */
+  /* Remove padding/centering so transform-origin: top left works cleanly */
+  .product-section__visual-inner {
+    padding: 0;
+    min-height: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  /* Spotlight fiche cliente on index.html */
+  .spotlight__visual {
+    overflow: hidden;
+    transform: none; /* remove perspective tilt on mobile */
+  }
+  /* Scale targets — JS sets width + transform */
+  .spotlight__panel,
+  .pv-agenda,
+  .pv-invoice {
+    transform-origin: top left;
+    flex-shrink: 0;
+  }
+  /* Undo the 1-col collapse set at 1099px — we want the 2-col kept for scaling */
+  .pv-agenda  { grid-template-columns: 280px 1fr; }
+  .pv-invoice { grid-template-columns: 1fr 280px; }
+
+  /* ── Compare table — horizontal scroll + sticky feature column ── */
+  .compare { padding: 0 16px; margin-top: 60px; overflow: hidden; }
+  .compare__title { font-size: clamp(22px, 6vw, 36px); margin-bottom: 24px; }
+  .compare-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -16px;
+    padding: 0 16px 20px;
+    /* Gradient hint on right edge */
+    -webkit-mask: linear-gradient(to right, black 85%, transparent 100%);
+    mask: linear-gradient(to right, black 85%, transparent 100%);
+  }
+  /* Keep table as a real table (undo any block resets) */
+  .compare-table,
+  .compare-table thead,
+  .compare-table tbody,
+  .compare-table tr,
+  .compare-table th,
+  .compare-table td { display: revert; }
+  .compare-table {
+    font-size: 12px;
+    min-width: 500px;
+    border-radius: var(--radius-xl);
+  }
+  .compare-table th, .compare-table td { padding: 10px 14px; }
+  /* Sticky feature-name column */
+  .compare-table thead th:first-child,
+  .compare-table tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    min-width: 120px;
+    max-width: 140px;
+    background: var(--color-bg-deep);
+  }
+  .compare-table thead th:first-child {
+    background: rgba(10,10,12,0.97);
+  }
+  .compare-table thead th { min-width: 80px; white-space: nowrap; }
+  /* Section headers span all — override sticky */
+  .compare-table .compare-section td {
+    position: static;
+    left: auto;
+  }
+  /* Remove ::before label trick — no longer needed */
+  .compare-table td::before { content: none; }
 }
 
 

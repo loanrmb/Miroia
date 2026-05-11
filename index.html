@@ -546,6 +546,33 @@
   <script src="animations.js"></script>
 
   <script>
+    // ============ SPOTLIGHT — FICHE CLIENTE SCALE ============
+    (() => {
+      const panel  = document.querySelector('.spotlight__visual .spotlight__panel');
+      const visual = document.querySelector('.spotlight__visual');
+      if (!panel || !visual) return;
+
+      const NATURAL_W = 700;
+
+      function scaleSpotlight() {
+        if (window.innerWidth > 740) {
+          panel.style.width = ''; panel.style.transform = '';
+          visual.style.height = '';
+          return;
+        }
+        panel.style.transform = 'none';
+        panel.style.width = NATURAL_W + 'px';
+        const h = panel.offsetHeight;
+        const s = visual.offsetWidth / NATURAL_W;
+        panel.style.transformOrigin = 'top left';
+        panel.style.transform = `scale(${s})`;
+        visual.style.height = Math.round(h * s) + 'px';
+      }
+
+      scaleSpotlight();
+      window.addEventListener('resize', scaleSpotlight, { passive: true });
+    })();
+
     // ============ CRM MOCKUP — SCALE TO FIT MOBILE ============
     (() => {
       const mock   = document.querySelector('.crm-mock');
