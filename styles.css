@@ -1162,10 +1162,15 @@ body::before {
   .manifest__title { font-size: 32px; }
   .footer { padding: 60px 16px 32px; }
   .footer__cols { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .crm-mock__sidebar { width: 140px; padding: 16px 10px; }
-  .crm-mock__main { padding: 18px 16px; }
-  .crm-cards { grid-template-columns: 1fr 1fr; }
-  .crm-cards .crm-stat:nth-child(3) { grid-column: span 2; }
+  /* CRM scale — JS injects transform + fixed width, CSS just locks the origin */
+  .crm-mock {
+    transform-origin: top left;
+    flex-shrink: 0;
+  }
+  .hero__visual {
+    overflow: hidden;
+    /* height is set by JS to match scaled content */
+  }
 }
 
 
@@ -1175,6 +1180,28 @@ body::before {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px;
+}
+
+/* Force GPU compositing on scroll-animated elements for 120Hz smoothness */
+[data-reveal],
+[data-reveal-children] > *,
+.reveal-word,
+.reveal-char,
+.hero__visual,
+.beauty__track,
+.spotlight__visual,
+.manifest__line {
+  will-change: transform, opacity;
+}
+/* Release will-change once visible (reduces VRAM on long pages) */
+[data-reveal].is-visible,
+[data-reveal-children].is-visible > * {
+  will-change: auto;
+}
+
+/* Sections: contain layout to avoid full-page reflows on scroll */
+.hero, .beauty, .spotlight, .cta, .manifest, .footer {
+  contain: layout style;
 }
 
 /* Page hero — smaller than homepage hero, single-column centered */
@@ -2353,12 +2380,6 @@ body::before { animation: drift 22s ease-in-out infinite; }
   /* Hero */
   .hero__title { font-size: 36px; }
   .hero__sub   { font-size: 15px; }
-
-  /* CRM mockup — hide sidebar to avoid overflow */
-  .crm-mock__sidebar { display: none; }
-  .crm-cards { grid-template-columns: 1fr !important; }
-  .crm-cards .crm-stat:nth-child(3) { grid-column: auto !important; }
-  .crm-mock__main { padding: 16px 14px; gap: 14px; }
 
   /* Section headers */
   .section-head__title  { font-size: 34px; }

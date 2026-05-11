@@ -672,7 +672,26 @@
 
   </div><!-- .page -->
 
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
   <script src="animations.js"></script>
+  <script>
+    (() => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const lenis = new Lenis({
+        duration: 1.15,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        smoothTouch: false,
+        wheelMultiplier: 0.9,
+      });
+      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+      const mo = new MutationObserver(() => {
+        document.body.style.overflow === "hidden" ? lenis.stop() : lenis.start();
+      });
+      mo.observe(document.body, { attributes: true, attributeFilter: ["style"] });
+    })();
+  </script>
 
 </body>
 </html>

@@ -542,7 +542,60 @@
   </div><!-- .page -->
 
 
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
   <script src="animations.js"></script>
+
+  <script>
+    // ============ LENIS SMOOTH SCROLL (120Hz) ============
+    (() => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const lenis = new Lenis({
+        duration: 1.15,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        smoothTouch: false,   // leave native iOS/Android momentum intact
+        wheelMultiplier: 0.9,
+      });
+      // Hook into IntersectionObserver timing
+      function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+      requestAnimationFrame(raf);
+      // Pause when mobile nav is open (body overflow:hidden)
+      const mo = new MutationObserver(() => {
+        document.body.style.overflow === 'hidden' ? lenis.stop() : lenis.start();
+      });
+      mo.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+    })();
+
+    // ============ CRM MOCKUP — SCALE TO FIT MOBILE ============
+    (() => {
+      const mock   = document.querySelector('.crm-mock');
+      const visual = document.querySelector('.hero__visual');
+      if (!mock || !visual) return;
+
+      const NATURAL_W = 820; // px — sidebar(200) + main + gap
+
+      function scaleCRM() {
+        if (window.innerWidth > 740) {
+          // Reset to desktop layout
+          mock.style.width     = '';
+          mock.style.transform = '';
+          visual.style.height  = '';
+          return;
+        }
+        // Step 1 — measure natural height at full width
+        mock.style.transform = 'none';
+        mock.style.width     = NATURAL_W + 'px';
+        const naturalH = mock.offsetHeight;
+
+        // Step 2 — compute scale and apply
+        const scale = visual.offsetWidth / NATURAL_W;
+        mock.style.transform = `scale(${scale})`;
+        visual.style.height  = Math.round(naturalH * scale) + 'px';
+      }
+
+      scaleCRM();
+      window.addEventListener('resize', scaleCRM, { passive: true });
+    })();
 
   <script>
 
