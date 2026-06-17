@@ -8,8 +8,8 @@ const i18n = {
     'nav.lang':       'EN',
 
     // HERO
-    'hero.headline':  'De « C’est quoi déjà qu’on avait fait ? » à « WOW, c’est vraiment moi ! »',
-    'hero.sub':       'Arrêtez de chercher vos photos dans WhatsApp et Google Drive. Offrez à chaque cliente un parcours avant/après privé et soigné — qu’elle voudra partager avec tout son entourage.',
+    'hero.headline':  'Le logiciel pensé pour les coachs en image',
+    'hero.sub':       'Offrez à chaque cliente un parcours visuel haut de gamme. Analyses colorimétriques, séances, portfolio privé et suivi pro. Tout dans un studio digital conçu pour ceux et celles qui vivent de leur passion.',
     'hero.cta1':      'Démarrer votre studio gratuit',
     'hero.cta2':      'Voir une transformation cliente',
     'hero.badge':     'Pensé pour les coachs en image au Québec',
@@ -62,8 +62,8 @@ const i18n = {
     'nav.lang':       'FR',
 
     // HERO
-    'hero.headline':  'From “What did we do last time?” to “WOW, is that really me?”',
-    'hero.sub':       'Stop hunting for photos in WhatsApp and Google Drive. Give every client a private, stunning before/after journey they’ll want to share with everyone.',
+    'hero.headline':  'The software built for image coaches',
+    'hero.sub':       'Give every client a premium visual journey. Colour analysis, sessions, private portfolio, and pro follow-up. All in a digital studio built for those who live their passion.',
     'hero.cta1':      'Start Your Free Studio',
     'hero.cta2':      'See a Client Transformation',
     'hero.badge':     'Designed for Image Consultants in Québec',
