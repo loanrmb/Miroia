@@ -28,16 +28,16 @@ const i18n = {
     // HOW IT WORKS
     'how.title':      'Comment ça fonctionne',
     'how.1.title':    'Capturez la magie du « Avant »',
-    'how.1.desc':     'Importez ou photographiez, Miroia organise instantanément par cliente. Fini les fichiers perdus.',
+    'how.1.desc':     'Importez ou photographiez, Miroïa organise instantanément par cliente. Fini les fichiers perdus.',
     'how.2.title':    'Concevez la révélation',
     'how.2.desc':     'Construisez vos comparaisons, ajoutez vos notes d’experte et préparez le grand moment.',
     'how.3.title':    'Offrez une expérience premium',
     'how.3.desc':     'Partagez un lien privé. Votre cliente se sent comme une star, repart avec son portfolio, et vous rebooke avant de partir.',
 
     // BEFORE / AFTER SECTION
-    'ba.title':       'La différence Miroia',
-    'ba.before.head': 'Avant Miroia',
-    'ba.after.head':  'Avec Miroia',
+    'ba.title':       'La différence Miroïa',
+    'ba.before.head': 'Avant Miroïa',
+    'ba.after.head':  'Avec Miroïa',
     'ba.1.before':    'Photos perdues dans WhatsApp, textos et pellicule',
     'ba.1.after':     'Chaque transformation classée par cliente, accessible en 2 secondes',
     'ba.2.before':    'La cliente oublie son « avant » et doute de votre valeur',
@@ -82,16 +82,16 @@ const i18n = {
     // HOW IT WORKS
     'how.title':      'How it works',
     'how.1.title':    'Capture the “Before” Magic',
-    'how.1.desc':     'Snap or upload — Miroia instantly organizes by client. No more lost files.',
+    'how.1.desc':     'Snap or upload — Miroïa instantly organizes by client. No more lost files.',
     'how.2.title':    'Design the Revelation',
     'how.2.desc':     'Build side-by-side looks, add your expert notes, and craft the big reveal moment.',
     'how.3.title':    'Deliver a Premium Experience',
     'how.3.desc':     'Share a private link. Your client feels like a star, gets an instant portfolio, and rebooks before she leaves.',
 
     // BEFORE / AFTER SECTION
-    'ba.title':       'The Miroia difference',
-    'ba.before.head': 'Before Miroia',
-    'ba.after.head':  'With Miroia',
+    'ba.title':       'The Miroïa difference',
+    'ba.before.head': 'Before Miroïa',
+    'ba.after.head':  'With Miroïa',
     'ba.1.before':    'Photos lost in WhatsApp, texts, and camera rolls',
     'ba.1.after':     'Every transformation organized by client, accessible in 2 seconds',
     'ba.2.before':    'Client forgets their “before” and doubts your value',
