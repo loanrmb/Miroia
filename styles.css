@@ -525,6 +525,7 @@ body::before {
 }
 .section-head__sub {
   font-size: 17px;
+  line-height: 1.65;
   color: var(--color-text-muted);
   max-width: 42ch;
   justify-self: end;
@@ -586,9 +587,9 @@ body::before {
   overflow: hidden;
 }
 .beauty__caption {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--color-text-muted);
-  line-height: 1.5;
+  line-height: 1.65;
   position: relative;
 }
 .beauty__caption strong {
@@ -748,7 +749,7 @@ body::before {
 .spotlight__sub {
   font-size: 17px;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.65;
   max-width: 56ch;
   margin: 0 auto;
 }
@@ -926,9 +927,9 @@ body::before {
   color: var(--color-text);
 }
 .feat6 p {
-  font-size: 14px;
+  font-size: 17px;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.65;
   max-width: 32ch;
 }
 
@@ -1633,7 +1634,7 @@ html {
 .product-section__sub {
   font-size: 17px;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.65;
   max-width: 44ch;
   justify-self: end;
 }
@@ -1698,9 +1699,9 @@ html {
   letter-spacing: -0.01em;
 }
 .product-section__feature p {
-  font-size: 14px;
+  font-size: 17px;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 /* Product page mock variants — agenda, invoice, mobile */
@@ -2507,22 +2508,31 @@ body::before { animation: drift 22s ease-in-out infinite; }
 .lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 14px;
-  border: 1px solid var(--color-border-strong);
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  color: inherit;
-  font-family: inherit;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 0;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: inherit;
+  color: inherit;
+  opacity: 0.6;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: opacity 0.18s ease;
+  letter-spacing: inherit;
 }
-.lang-toggle:hover { background: rgba(255,255,255,0.14); }
-.lang-toggle:focus-visible { outline: none; background: rgba(255,255,255,0.14); }
-.lang-globe { font-size: 1rem; }
+.lang-toggle:hover {
+  opacity: 1;
+  background: none;
+}
+.lang-toggle:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.25);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.lang-globe {
+  font-size: 0.85em;
+  line-height: 1;
+}
 
 /* ============================================
    29. AVANT / APRÈS SECTION
@@ -2602,4 +2612,40 @@ body::before { animation: drift 22s ease-in-out infinite; }
 }
 @media (max-width: 480px) {
   .section-ba .section-title { font-size: 34px; }
+}
+
+/* ============================================
+   30. PRICING COMPARE — column differentiation
+   ============================================ */
+.plan-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--c-violet), var(--c-pink));
+  color: #fff;
+  margin-bottom: 6px;
+  vertical-align: middle;
+}
+
+/* Pro column (3rd) — recommended tier */
+.compare-table thead th:nth-child(3),
+.compare-table td[data-label="Pro"] {
+  background: rgba(178, 102, 255, 0.05);
+}
+.compare-table thead th:nth-child(3) {
+  border-top: 2px solid var(--c-violet);
+  position: relative;
+}
+
+/* Studio column (4th) — slightly elevated, no gradient */
+.compare-table thead th:nth-child(4),
+.compare-table td[data-label="Studio"] {
+  background: var(--color-surface);
+}
+.compare-table thead th:nth-child(4) {
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
 }
