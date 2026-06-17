@@ -368,10 +368,29 @@
         <a href="ressources.html" class="active" data-i18n="nav.resources">Ressources</a>
         <a href="index.html#manifest">Notre vision</a>
       </div>
-      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
-        <span class="lang-globe">🌐</span>
-        <span class="lang-label" data-i18n="nav.lang">EN</span>
-      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button
+          class="lang-dropdown__btn"
+          id="lang-toggle"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-label="Changer de langue">
+          <span class="lang-label">FR</span>
+          <svg class="lang-caret" width="10" height="6" viewBox="0 0 10 6"
+               fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown__menu" role="listbox" id="lang-menu" hidden>
+          <li role="option">
+            <button class="lang-option" data-lang="fr">Français</button>
+          </li>
+          <li role="option">
+            <button class="lang-option" data-lang="en">English</button>
+          </li>
+        </ul>
+      </div>
       <a class="nav__cta" href="tarifs.html#cta" data-i18n="nav.cta">Essayer gratuitement</a>
       <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>

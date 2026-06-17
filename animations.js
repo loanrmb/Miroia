@@ -194,8 +194,12 @@ function applyLang(lang) {
     if (i18n[lang]?.[key]) el.innerHTML = i18n[lang][key];
   });
   document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en';
-  const label = document.querySelector('.lang-label');
-  if (label) label.textContent = i18n[lang]['nav.lang'];
+  document.querySelectorAll('.lang-label').forEach(el => {
+    el.textContent = lang.toUpperCase();
+  });
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.classList.toggle('lang-option--active', btn.dataset.lang === lang);
+  });
   localStorage.setItem('miroia-lang', lang);
 }
 
@@ -203,8 +207,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('miroia-lang') || 'fr';
   applyLang(saved);
 
-  document.getElementById('lang-toggle')?.addEventListener('click', () => {
-    const current = localStorage.getItem('miroia-lang') || 'fr';
-    applyLang(current === 'fr' ? 'en' : 'fr');
+  const trigger  = document.getElementById('lang-toggle');
+  const menu     = document.getElementById('lang-menu');
+  const dropdown = document.getElementById('lang-dropdown');
+
+  function openDropdown() {
+    if (!menu) return;
+    menu.hidden = false;
+    trigger.setAttribute('aria-expanded', 'true');
+    dropdown.classList.add('is-open');
+  }
+  function closeDropdown() {
+    if (!menu) return;
+    menu.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+    dropdown.classList.remove('is-open');
+  }
+
+  trigger?.addEventListener('click', e => {
+    e.stopPropagation();
+    menu.hidden ? openDropdown() : closeDropdown();
+  });
+
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyLang(btn.dataset.lang);
+      closeDropdown();
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!dropdown?.contains(e.target)) closeDropdown();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeDropdown();
   });
 });
