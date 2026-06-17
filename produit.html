@@ -38,12 +38,16 @@
       Miroia
     </a>
     <div class="nav__links">
-      <a href="produit.html">Produit</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="ressources.html">Ressources</a>
+      <a href="produit.html" data-i18n="nav.product">Produit</a>
+      <a href="tarifs.html" data-i18n="nav.pricing">Tarifs</a>
+      <a href="ressources.html" data-i18n="nav.resources">Ressources</a>
       <a href="index.html#manifest">Notre vision</a>
     </div>
-    <a class="nav__cta" href="#cta">Essayer gratuitement</a>
+    <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+      <span class="lang-globe">🌐</span>
+      <span class="lang-label" data-i18n="nav.lang">EN</span>
+    </button>
+    <a class="nav__cta" href="#cta" data-i18n="nav.cta">Essayer gratuitement</a>
     <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -52,12 +56,12 @@
 
 <!-- Mobile nav overlay -->
 <div class="nav__mobile" aria-hidden="true">
-  <a class="nav__mobile__link" href="produit.html">Produit</a>
-  <a class="nav__mobile__link" href="tarifs.html">Tarifs</a>
-  <a class="nav__mobile__link" href="ressources.html">Ressources</a>
+  <a class="nav__mobile__link" href="produit.html" data-i18n="nav.product">Produit</a>
+  <a class="nav__mobile__link" href="tarifs.html" data-i18n="nav.pricing">Tarifs</a>
+  <a class="nav__mobile__link" href="ressources.html" data-i18n="nav.resources">Ressources</a>
   <a class="nav__mobile__link" href="index.html#manifest">Notre vision</a>
   <div class="nav__mobile__sep"></div>
-  <a class="nav__mobile__cta btn btn--prism" href="#cta">Essayer gratuitement</a>
+  <a class="nav__mobile__cta btn btn--prism" href="#cta" data-i18n="nav.cta">Essayer gratuitement</a>
 </div>
 
 <div class="page">
@@ -510,13 +514,13 @@
   </div>
   <div class="footer__bottom">
     <p>© Miroia 2025</p>
-    <p>Conçu pour les coachs en image, partout en France.</p>
+    <p data-i18n="footer.tagline">Conçu pour les coachs en image, partout en France.</p>
   </div>
 </footer>
 
 </div><!-- .page -->
 
-<script src="animations.js"></script>
+<script type="module" src="animations.js"></script>
 <script>
 // ============ PRODUCT VISUALS — SCALE TO FIT MOBILE ============
 (() => {

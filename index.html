@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miroia — Le système pensé pour les coachs en image</title>
-  <meta name="description" content="Centralisez clientes, séances, analyses et facturation. Le seul CRM conçu spécifiquement pour les coachs en image." />
+  <meta name="description" content="Centralisez clientes, séances, analyses et facturation. La plateforme Miroia conçue spécifiquement pour les coachs en image." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -41,12 +41,16 @@
   Miroia
   </a>
       <div class="nav__links">
-        <a href="produit.html">Produit</a>
-        <a href="tarifs.html">Tarifs</a>
-        <a href="ressources.html">Ressources</a>
+        <a href="produit.html" data-i18n="nav.product">Produit</a>
+        <a href="tarifs.html" data-i18n="nav.pricing">Tarifs</a>
+        <a href="ressources.html" data-i18n="nav.resources">Ressources</a>
         <a href="#manifest">Notre vision</a>
       </div>
-      <a class="nav__cta" href="#cta">Essayer gratuitement</a>
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+        <span class="lang-globe">🌐</span>
+        <span class="lang-label" data-i18n="nav.lang">EN</span>
+      </button>
+      <a class="nav__cta" href="#cta" data-i18n="nav.cta">Essayer gratuitement</a>
       <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -55,12 +59,12 @@
 
   <!-- Mobile nav overlay -->
   <div class="nav__mobile" aria-hidden="true">
-    <a class="nav__mobile__link" href="produit.html">Produit</a>
-    <a class="nav__mobile__link" href="tarifs.html">Tarifs</a>
-    <a class="nav__mobile__link" href="ressources.html">Ressources</a>
+    <a class="nav__mobile__link" href="produit.html" data-i18n="nav.product">Produit</a>
+    <a class="nav__mobile__link" href="tarifs.html" data-i18n="nav.pricing">Tarifs</a>
+    <a class="nav__mobile__link" href="ressources.html" data-i18n="nav.resources">Ressources</a>
     <a class="nav__mobile__link" href="#manifest">Notre vision</a>
     <div class="nav__mobile__sep"></div>
-    <a class="nav__mobile__cta btn btn--prism" href="#cta">Essayer gratuitement</a>
+    <a class="nav__mobile__cta btn btn--prism" href="#cta" data-i18n="nav.cta">Essayer gratuitement</a>
   </div>
 
   <div class="page">
@@ -70,18 +74,18 @@
          ============================================ -->
     <section class="hero">
       <div class="hero__top">
-        <h1 class="hero__title" data-reveal-words>Le système pensé pour les coachs en image</h1>
+        <h1 class="hero__title" data-reveal-words data-i18n="hero.headline">Le système pensé pour les coachs en image</h1>
         <a class="hero__pill" href="#manifest">
           <span class="hero__pill-dot"></span>
           Pourquoi un outil dédié <span class="hero__pill-arrow">→</span>
         </a>
       </div>
-      <p class="hero__sub" data-reveal>
+      <p class="hero__sub" data-reveal data-i18n="hero.sub">
         Centralisez vos clientes, séances, analyses colorimétriques et facturation. Conçu pour celles qui transforment leur passion en activité durable.
       </p>
 
       <div class="hero__visual">
-        <!-- CRM dashboard mockup — replace with real screenshot when ready -->
+        <!-- Studio dashboard mockup — replace with real screenshot when ready -->
         <div class="crm-mock">
 
           <div class="crm-mock__sidebar">
@@ -322,7 +326,39 @@
 
 
     <!-- ============================================
-         SECTION 3 — SPOTLIGHT (Config-inspired)
+         SECTION 3 — AVANT / APRÈS
+         ============================================ -->
+    <section class="section-ba">
+      <div class="container">
+        <h2 class="section-title" data-i18n="ba.title">La différence Miroia</h2>
+        <div class="ba-grid">
+          <div class="ba-col ba-col--before">
+            <div class="ba-col__head" data-i18n="ba.before.head">Avant Miroia</div>
+            <ul class="ba-list">
+              <li data-i18n="ba.1.before">Photos perdues dans WhatsApp, textos et pellicule</li>
+              <li data-i18n="ba.2.before">La cliente oublie son « avant » et doute de votre valeur</li>
+              <li data-i18n="ba.3.before">Partager par e-mail ou Dropbox paraît peu professionnel</li>
+              <li data-i18n="ba.4.before">Aucun système pour déclencher les rebookings</li>
+              <li data-i18n="ba.5.before">Les références arrivent par hasard</li>
+            </ul>
+          </div>
+          <div class="ba-col ba-col--after">
+            <div class="ba-col__head" data-i18n="ba.after.head">Avec Miroia</div>
+            <ul class="ba-list">
+              <li data-i18n="ba.1.after">Chaque transformation classée par cliente, accessible en 2 secondes</li>
+              <li data-i18n="ba.2.after">Un « Parcours Cliente » privé prouve la transformation sous ses yeux</li>
+              <li data-i18n="ba.3.after">Un portail soigné à votre image — l'expérience d'un service de luxe</li>
+              <li data-i18n="ba.4.after">Rappels automatiques « 3 mois déjà — il est temps d'un refresh ! »</li>
+              <li data-i18n="ba.5.after">La cliente partage son lookbook ; votre nom est sur chaque page</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         SECTION 4 — SPOTLIGHT (Config-inspired)
          ============================================ -->
     <section class="spotlight">
       <div class="spotlight__head">
@@ -535,7 +571,7 @@
 
       <div class="footer__bottom">
         <p>© Miroia 2025</p>
-        <p>Conçu pour les coachs en image, partout en France.</p>
+        <p data-i18n="footer.tagline">Conçu pour les coachs en image, partout en France.</p>
       </div>
     </footer>
 
@@ -543,11 +579,11 @@
 
 
 
-  <script src="animations.js"></script>
+  <script type="module" src="animations.js"></script>
 
   <script>
     // ============ SPOTLIGHT — FICHE CLIENTE SCALE ============
-    // Same pattern as CRM: fc-aside (profile sidebar) hidden via CSS,
+    // Same pattern as studio: fc-aside (profile sidebar) hidden via CSS,
     // fc-main (the data) is what gets scaled — exactly like crm-mock__sidebar hidden.
     (() => {
       const panel  = document.querySelector('.spotlight__visual .spotlight__panel');
@@ -572,7 +608,7 @@
       window.addEventListener('resize', scaleSpotlight, { passive: true });
     })();
 
-    // ============ CRM MOCKUP — SCALE TO FIT MOBILE ============
+    // ============ STUDIO MOCKUP — SCALE TO FIT MOBILE ============
     (() => {
       const mock   = document.querySelector('.crm-mock');
       const visual = document.querySelector('.hero__visual');

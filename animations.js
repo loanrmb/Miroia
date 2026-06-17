@@ -181,3 +181,30 @@
   }
 
 })();
+
+import i18n from './i18n.js';
+
+function applyLang(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (i18n[lang]?.[key]) el.textContent = i18n[lang][key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (i18n[lang]?.[key]) el.innerHTML = i18n[lang][key];
+  });
+  document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en';
+  const label = document.querySelector('.lang-label');
+  if (label) label.textContent = i18n[lang]['nav.lang'];
+  localStorage.setItem('miroia-lang', lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('miroia-lang') || 'fr';
+  applyLang(saved);
+
+  document.getElementById('lang-toggle')?.addEventListener('click', () => {
+    const current = localStorage.getItem('miroia-lang') || 'fr';
+    applyLang(current === 'fr' ? 'en' : 'fr');
+  });
+});
