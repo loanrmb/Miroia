@@ -524,7 +524,7 @@ body::before {
   letter-spacing: -0.04em;
 }
 .section-head__sub {
-  font-size: 17px;
+  font-size: clamp(16px, 1.35vw, 19px);
   line-height: 1.65;
   color: var(--color-text-muted);
   max-width: 42ch;
@@ -545,7 +545,7 @@ body::before {
 .beauty__track {
   display: flex;
   gap: 16px;
-  transition: transform 0.7s var(--ease-glide);
+  transition: transform 0.75s cubic-bezier(0.45, 0, 0.55, 1);
 }
 .beauty__card {
   flex: 0 0 calc((100% - 32px) / 3);

@@ -244,3 +244,68 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeDropdown();
   });
 });
+
+/* ── Carousel auto-scroll ─────────────────────── */
+(function initCarouselAutoScroll() {
+  const DELAY  = 4500;   // ms between auto-advances
+  const RESUME = 6000;   // ms after interaction before resuming
+
+  let autoTimer   = null;
+  let resumeTimer = null;
+
+  // The "Tout est dans le détail" carousel logic lives in an IIFE inside
+  // index.html and is not reachable here. Its only externally usable advance
+  // mechanism is its controls, so we advance by clicking the dot after the
+  // active one (wrapping to the first), which reuses the existing goTo()
+  // handler. Programmatic .click() events are isTrusted=false, so the pause()
+  // guard ignores them and auto-advance never pauses itself.
+  function goToNextSlide() {
+    const dots = [...document.querySelectorAll('.beauty__dot')];
+    if (!dots.length) return;
+    const activeIdx = dots.findIndex(d => d.classList.contains('active'));
+    const next = dots[(activeIdx + 1) % dots.length];
+    next?.click();
+  }
+
+  function start() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => {
+      goToNextSlide();
+    }, DELAY);
+  }
+
+  function pause(e) {
+    if (e && !e.isTrusted) return;   // ignore our own programmatic advances
+    clearInterval(autoTimer);
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(start, RESUME);
+  }
+
+  function stop() {
+    clearInterval(autoTimer);
+    clearTimeout(resumeTimer);
+  }
+
+  // Start on load
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('beautyTrack');
+    if (!track) return;   // carousel only exists on index.html
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    start();
+
+    // Pause on every manual interaction (arrows + dots), alongside the
+    // existing handlers — these are not replaced.
+    const arrows = document.querySelectorAll('.beauty__btn');
+    const dots   = document.querySelectorAll('.beauty__dot');
+
+    [...arrows, ...dots].forEach(el => {
+      el.addEventListener('click', pause, { passive: true });
+    });
+
+    // Pause while hovering the carousel section
+    const section = document.querySelector('.beauty');
+    section?.addEventListener('mouseenter', stop);
+    section?.addEventListener('mouseleave', start);
+  });
+}());
